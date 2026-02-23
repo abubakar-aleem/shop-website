@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akbar Sanitary Store | Premium Solutions Since 1994</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <span><i class="fas fa-phone-alt"></i> +92 3214715974</span>
+        <span><i class="fas fa-phone-alt"></i> +92 3211106560</span>
+        <span><i class="fas fa-phone-alt"></i> +92 3211306560</span>
+        <span>Lahore, Pakistan</span>
+    </div>
+
+    <header>
+        <div class="logo" onclick="showPage('home')">
+            <i class="fas fa-faucet-drip logo-icon"></i>
+            <span>Akbar & Sons Sanitary Store</span>
+        </div>
+        <div class="menu-btn" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+        <nav id="navMenu">
+            <a data-page="home" class="active" onclick="showPage('home')">Home</a>
+            <a data-page="products" onclick="showPage('products')">Products</a>
+            <a data-page="about" onclick="showPage('about')">About Us</a>
+            <a data-page="faq" onclick="showPage('faq')">FAQs</a>
+            <a data-page="contact" onclick="showPage('contact')">Contact Us</a>
+        </nav>
+        <div class="header-icons">
+            <span>
+                <i class="fas fa-shopping-basket"></i>
+                <span class="cart-badge">0</span>
+            </span>
+        </div>
+    </header>
+
+    <!-- HOME -->
+        <div id="faq" class="page-section active">
+        <section class="section-padding">
+            <h1 class="section-title" style="text-align: center; margin: 0 auto 3rem;">Frequently Asked
+                Questions</h1>
+            <div class="text-container"
+                style="max-width: 900px; padding: 0; background: transparent; box-shadow: none;">
+                <div class="faq-item open">
+                    <div class="faq-q" onclick="toggleFaq(this)"><b>What materials are your faucets made of?</b>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-a">Our faucets are made from high-grade brass with a premium chrome finish.
+                        This
+                        ensures durability, resistance to rust and corrosion, and a long-lasting shine.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)"><b>Do your products come with a warranty?</b>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-a">Yes, all our products come with a warranty or guarantee, but the duration
+                        depends
+                        on the product type and material. Please note that ceramic products do not come with any
+                        warranty or guarantee.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)"><b>What payment methods do you accept?</b> <i
+                            class="fas fa-chevron-down"></i></div>
+                    <div class="faq-a">We accept various payment methods, including credit cards, jazzcash,
+                        easypaisa,
+                        sadapay, and bank transfers.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)"><b>How do I contact customer service?</b> <i
+                            class="fas fa-chevron-down"></i></div>
+                    <div class="faq-a">You can contact our customer service team through phone, email, or our
+                        website's
+                        contact form.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)"><b>What products do you offer?</b> <i
+                            class="fas fa-chevron-down"></i></div>
+                    <div class="faq-a">We offer a range of sanitary products, including those from reputable
+                        brands like
+                        Popular, Dura, IIL, Turkplast and also GI(HE) fittings.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)"><b>Are your products of high quality?</b> <i
+                            class="fas fa-chevron-down"></i></div>
+                    <div class="faq-a">Yes, we prioritize quality and source products from trusted manufacturers
+                        like
+                        Dura, Popular and Turkplast.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)"><b>Can I trust the authenticity of your
+                            products?</b>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-a">Absolutely! We only deal in genuine products from authorized
+                        distributors.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)"><b>What brands do you partner with?</b> <i
+                            class="fas fa-chevron-down"></i></div>
+                    <div class="faq-a">We partner with renowned brands like Dura, Popular, IIL, GI(HE) and
+                        Turkplast,
+                        ensuring high-quality products for our customers.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)"><b>Do you have any certifications from Dura,
+                            Popular,
+                            and Turkplast?</b> <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-a">Yes, we hold certificates from these reputable companies, confirming
+                        authorization to distribute their products.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)"><b>What does the certification from Dura,
+                            Popular, and
+                            Turkplast mean?</b> <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-a">It means we've met their standards for quality, reliability, and business
+                        practices, ensuring our customers receive authentic products.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)"><b>Is your sanitary business registered with
+                            the
+                            government?</b> <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-a">Yes, our business is fully registered and compliant with all relevant
+                        government
+                        regulations.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)"><b>Can I see your certificates?</b> <i
+                            class="fas fa-chevron-down"></i></div>
+                    <div class="faq-a">Yes, we can provide documentation upon request, showcasing our
+                        certification with
+                        these brands.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)"><b>How does this certification benefit
+                            customers?</b>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-a">It guarantees product authenticity, quality, and reliability, giving
+                        customers
+                        peace of mind when purchasing from us.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)"><b>Are you an authorized distributor for these
+                            brands?</b> <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-a">Yes, our certification confirms our authorized status.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)"><b>What areas do you serve?</b> <i
+                            class="fas fa-chevron-down"></i></div>
+                    <div class="faq-a">We serve in all over Lahore but mostly in areas like Defence, Model town,
+                        Johar
+                        town, Bahria town, Central Park and many more.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)"><b>How do I schedule a service appointment?</b>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-a">You can schedule an appointment by calling us at [03211306560,
+                        03214715974,
+                        03211106560] or through our website.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)"><b>Do you offer emergency plumbing
+                            services?</b> <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-a">Yes, we offer emergency plumbing services for urgent issues.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)"><b>What types of sanitary fittings do you
+                            install?</b>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-a">We install a wide range of sanitary fittings, including toilets, sinks,
+                        showers,
+                        and more.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)"><b>Do you provide warranties on your work?</b>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-a">Yes, we provide warranties on our work and products.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)"><b>How can I get a quote for my project?</b> <i
+                            class="fas fa-chevron-down"></i></div>
+                    <div class="faq-a">You can get a quote by contacting us through our website or giving us a
+                        call.
+                    </div>
+                </div>
+            </div>
+    </div>
+    </section>
+    </div>
+
+    <!-- CONTACT -->
+<footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a class="footer-logo" onclick="showPage('home')"><u>Akbar & Sons Sanitary Store </u><a>
+                        <p style="color: rgba(255,255,255,0.6); margin-bottom: 1.5rem;">The leading supplier of
+                            premium
+                            sanitary
+                            ware and plumbing solutions since 1994. Quality you can build on.</p>
+                        <div class="header-icons" style="color: white; gap: 1rem; font-size: 1rem;">
+                            <a href="https://www.facebook.com/akbarsons"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/akbar__sanitary__store?igsh=MWt0MWFoZDlwMnF4cw=="><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://wa.me/923211306560"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://www.tiktok.com/@akbarsons"><i class="fab fa-tiktok"></i></a>
+                        </div>
+            </div>
+
+            <div class="footer-col">
+                <h5><b>Quick Links</b></h5>
+                <ul class="footer-links">
+                    <li><a onclick="showPage('home')">Home</a></li>
+                    <li><a onclick="showPage('products')">Product Catalog</a></li>
+                    <li><a onclick="showPage('about')">Our History</a></li>
+                    <li><a onclick="showPage('faq')">FAQs</a></li>
+                    <li><a onclick="showPage('contact')">Connect With Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Support</h5>
+                <ul class="footer-links">
+                    <li><a onclick="showPage('privacy-policy')">Privacy Policy</a></li>
+                    <li><a onclick="showPage('terms-conditions')">Terms & Conditions</a></li>
+                    <li><a onclick="showPage('exchange-return')">Exchange & Return</a></li>
+                    <li><a onclick="showPage('refund-policy')">Refund Policy</a></li>
+                    <li><a onclick="showPage('cancellation-policy')">Cancellation Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Premium Partners</h5>
+                <ul class="footer-links">
+                    <li><a href="#">Popular Pipes</a></li>
+                    <li><a href="#">Dura Flow</a></li>
+                    <li><a href="#">Turk Plast</a></li>
+                    <li><a href="#">IIL</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Store Location</h5>
+                <p style="color: rgba(255,255,255,0.6);">Main Defence Ghazi Road , Lahore.<br>Call us:<u> 0321
+                        4715974</u> <br><u> 0321 1106560 </u> <br><u> 0321 1306560 </u> <br> Timings: <br>Mon - Sat:
+                    9:00 AM - 8:00 PM
+                    <br>Sunday: 9:00 AM - 3:00 PM <br>
+                    Friday Break: 12:30 PM - 2:30 PM
+                </p>
+                <div style="margin-top: 1rem; color: var(--premium-bronze);">
+                    <i class="fas fa-medal"></i> <span style="font-size: 0.8rem; font-weight: 600;">CERTIFIED
+                        QUALITY
+                        PARTNER</span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Akbar Sanitary Store. All Rights Reserved. | Designed for Excellence.
+        </div>
+    </footer>
+
+    <a href="https://wa.me/923211306560" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

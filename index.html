@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akbar Sanitary Store | Premium Solutions Since 1994</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <span><i class="fas fa-phone-alt"></i> +92 3214715974</span>
+        <span><i class="fas fa-phone-alt"></i> +92 3211106560</span>
+        <span><i class="fas fa-phone-alt"></i> +92 3211306560</span>
+        <span>Lahore, Pakistan</span>
+    </div>
+
+    <header>
+        <div class="logo" onclick="showPage('home')">
+            <i class="fas fa-faucet-drip logo-icon"></i>
+            <span>Akbar & Sons Sanitary Store</span>
+        </div>
+        <div class="menu-btn" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+        <nav id="navMenu">
+            <a data-page="home" class="active" onclick="showPage('home')">Home</a>
+            <a data-page="products" onclick="showPage('products')">Products</a>
+            <a data-page="about" onclick="showPage('about')">About Us</a>
+            <a data-page="faq" onclick="showPage('faq')">FAQs</a>
+            <a data-page="contact" onclick="showPage('contact')">Contact Us</a>
+        </nav>
+        <div class="header-icons">
+            <span>
+                <i class="fas fa-shopping-basket"></i>
+                <span class="cart-badge">0</span>
+            </span>
+        </div>
+    </header>
+
+    <!-- HOME -->
+    <div id="home" class="page-section active">
+        <!-- HERO SLIDER -->
+        <section class="hero-slider-section">
+            <div class="hero-slider">
+                <div class="slider-images">
+                    <img src="/shoppic/homeslider.png" alt="homeslider" class="slider-img active">
+                    <img src="/shoppic/pprc slider.png" alt="PPR-C Pipes & Fittings" class="slider-img">
+                    <img src="/shoppic/pvc slider.png" alt="PVC Pipes & Fittings" class="slider-img">
+                    <img src="/shoppic/facuets slider.jpg" alt="Faucets & Taps" class="slider-img">
+                    <img src="/shoppic/gi slider.png" alt="GI Fittings" class="slider-img">
+                    <img src="/shoppic/sanitarywareslider.jpg" alt="Sanitary Ware" class="slider-img">
+                </div>
+                <button class="slider-arrow slider-arrow-left" onclick="moveSlider(-0)"><i
+                        class="fas fa-chevron-left"></i></button>
+                <button class="slider-arrow slider-arrow-right" onclick="moveSlider(1)"><i
+                        class="fas fa-chevron-right"></i></button>
+                <div class="slider-dots">
+                    <span class="slider-dot active" onclick="goToSlide(0)"></span>
+                    <span class="slider-dot" onclick="goToSlide(1)"></span>
+                    <span class="slider-dot" onclick="goToSlide(2)"></span>
+                    <span class="slider-dot" onclick="goToSlide(3)"></span>
+                    <span class="slider-dot" onclick="goToSlide(4)"></span>
+                    <span class="slider-dot" onclick="goToSlide(5)"></span>
+
+                </div>
+            </div>
+        </section>
+        
+        
+
+        <!-- FEATURED PRODUCTS (Matching Pic 1) -->
+        <section id="featured" class="section-padding">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="/shoppic/electric tap.png" alt="Mixer Faucet" class="product-image">
+                    </div>
+                    <div class="product-card-info">
+                        <h3>Instant Hot Water Faucet</h3>
+                        <p>Provides instant hot water with fast heating technology for kitchens and bathrooms.</p>
+                    </div>
+                    <button class="btn btn-primary" onclick="showPage('products')">View Product</button>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="/shoppic/SHINER.png" alt="Rain Shower" class="product-image">
+                    </div>
+                    <div class="product-card-info">
+                        <h3>Chrome Shinner</h3>
+                        <p>Restores shine and removes stains from chrome fittings for a sparkling finish.</p>
+                        <!-- <span class="badge-id">#Boarrt Bronze</span> -->
+                    </div>
+                    <button class="btn btn-premium" onclick="showPage('products')">View Product</button>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="/shoppic/toilet shower.jpeg" alt="Toilet shower" class="product-image">
+                    </div>
+                    <div class="product-card-info">
+                        <h3>Decent Toilet Shower</h3>
+                        <p>Decent Plastic Toilet Shower with Copper rod and Brass spring.</p>
+                        <!-- <span class="badge-id">#Soft Blue</span> -->
+                    </div>
+                    <button class="btn btn-secondary" onclick="showPage('products')">View Product</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- BROWSE BY CATEGORY (Matching Pic 3 Style) -->
+        <section id="categories" class="section-padding section-alt">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="font-size: 2.2rem; font-weight:700; color: var(--charcoal-gray); margin-bottom: 0.5rem;">
+                    Browse by Category</h2>
+                <p style="color: var(--medium-gray);">Select a category to see details</p>
+            </div>
+
+            <div class="category-grid">
+                <div class="cat-item" onclick="openSub('pprc-pvc')">
+                    <div class="cat-img-box"><img src="/shoppic/pprc and pvc.png" alt="PVC & PPRC"></div>
+                    <h4>PVC & PPRC Fittings</h4>
+                    <p>Dura, Popular, IIL & Turk Plast</p>
+                </div>
+
+                <div class="cat-item" onclick="showPage('products-gi')">
+                    <div class="cat-img-box"><img src="/shoppic/homegi fiiting.jpeg" alt="GI Fittings"></div>
+                    <h4>GI Fittings</h4>
+                    <p>All Sizes Available</p>
+                </div>
+
+                <div class="cat-item" onclick="openSub('faucets')">
+                    <div class="cat-img-box"><img src="/shoppic/facuets pic.jpg" alt="Faucets"></div>
+                    <h4>Faucets , Mixers & Accessories</h4>
+                    <p>Luxury Chrome Fittings</p>
+                </div>
+
+                <div class="cat-item" onclick="openSub('sanitary')">
+                    <div class="cat-img-box"><img src="/shoppic/sanitaryware pic.png" alt="Sanitary Ware"></div>
+                    <h4>Sanitary Ware</h4>
+                    <p>Commodes , WC's/Flush , Flush Tanks , Wash Baisans & Kitchen Sinks</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE US? (Matching Pic 1 Layout) -->
+        <section id="why-choose-us" style="padding: 0;">
+            <div class="why-us-split">
+                <div class="why-us-left">
+                    <h2>Why Choose Us?</h2>
+                    <div
+                        style="width: 120px; height: 120px; border-radius: 50%; overflow: hidden; margin-top: 20px; border: 4px solid rgba(255,255,255,0.2);">
+                        <img src="/shoppic/lever mixer.png" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+                <div class="why-us-right">
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-atom"></i></div>
+                            <h4>Comfort For You</h4>
+                            <p>Premium solutions designed for your everyday comfort.</p>
+                            <span class="feature-sub">Quality assurance since 1994.</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-swatchbook"></i></div>
+                            <h4>Designable</h4>
+                            <p>Elegance that matches your modern bathroom aesthetics.</p>
+                            <span class="feature-sub">Premium Collections.</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-shield-halved"></i></div>
+                            <h4>Comfortable</h4>
+                            <p>Reliable and durable fittings that stand the test of time.</p>
+                            <span class="feature-sub">Your building, our care.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CERTIFICATES AND APPROVALS SECTION -->
+        <section id="certificates-approvals" class="section-padding section-alt">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="font-size: 2.2rem; font-weight:700; color: var(--charcoal-gray); margin-bottom: 0.5rem;">
+                    Certificates and Approvals</h2>
+                <p style="color: var(--medium-gray);">Our official certificates and brand authorizations</p>
+            </div>
+            <div class="category-grid">
+                <div class="cat-item">
+                    <div class="cat-img-box"><img src="https://via.placeholder.com/300x180?text=Certificate+1"
+                            alt="Certificate 1"></div>
+                    <h4>Certificate 1</h4>
+                    <p>Brand/Authority Name</p>
+                </div>
+                <div class="cat-item">
+                    <div class="cat-img-box"><img src="https://via.placeholder.com/300x180?text=Certificate+2"
+                            alt="Certificate 2"></div>
+                    <h4>Certificate 2</h4>
+                    <p>Brand/Authority Name</p>
+                </div>
+                <div class="cat-item">
+                    <div class="cat-img-box"><img src="https://via.placeholder.com/300x180?text=Certificate+3"
+                            alt="Certificate 3"></div>
+                    <h4>Certificate 3</h4>
+                    <p>Brand/Authority Name</p>
+                </div>
+                <div class="cat-item">
+                    <div class="cat-img-box"><img src="https://via.placeholder.com/300x180?text=Certificate+4"
+                            alt="Certificate 4"></div>
+                    <h4>Certificate 4</h4>
+                    <p>Brand/Authority Name</p>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+
+
+    <!-- Product pg -->
+<footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a class="footer-logo" onclick="showPage('home')"><u>Akbar & Sons Sanitary Store </u><a>
+                        <p style="color: rgba(255,255,255,0.6); margin-bottom: 1.5rem;">The leading supplier of
+                            premium
+                            sanitary
+                            ware and plumbing solutions since 1994. Quality you can build on.</p>
+                        <div class="header-icons" style="color: white; gap: 1rem; font-size: 1rem;">
+                            <a href="https://www.facebook.com/akbarsons"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/akbar__sanitary__store?igsh=MWt0MWFoZDlwMnF4cw=="><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://wa.me/923211306560"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://www.tiktok.com/@akbarsons"><i class="fab fa-tiktok"></i></a>
+                        </div>
+            </div>
+
+            <div class="footer-col">
+                <h5><b>Quick Links</b></h5>
+                <ul class="footer-links">
+                    <li><a onclick="showPage('home')">Home</a></li>
+                    <li><a onclick="showPage('products')">Product Catalog</a></li>
+                    <li><a onclick="showPage('about')">Our History</a></li>
+                    <li><a onclick="showPage('faq')">FAQs</a></li>
+                    <li><a onclick="showPage('contact')">Connect With Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Support</h5>
+                <ul class="footer-links">
+                    <li><a onclick="showPage('privacy-policy')">Privacy Policy</a></li>
+                    <li><a onclick="showPage('terms-conditions')">Terms & Conditions</a></li>
+                    <li><a onclick="showPage('exchange-return')">Exchange & Return</a></li>
+                    <li><a onclick="showPage('refund-policy')">Refund Policy</a></li>
+                    <li><a onclick="showPage('cancellation-policy')">Cancellation Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Premium Partners</h5>
+                <ul class="footer-links">
+                    <li><a href="#">Popular Pipes</a></li>
+                    <li><a href="#">Dura Flow</a></li>
+                    <li><a href="#">Turk Plast</a></li>
+                    <li><a href="#">IIL</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Store Location</h5>
+                <p style="color: rgba(255,255,255,0.6);">Main Defence Ghazi Road , Lahore.<br>Call us:<u> 0321
+                        4715974</u> <br><u> 0321 1106560 </u> <br><u> 0321 1306560 </u> <br> Timings: <br>Mon - Sat:
+                    9:00 AM - 8:00 PM
+                    <br>Sunday: 9:00 AM - 3:00 PM <br>
+                    Friday Break: 12:30 PM - 2:30 PM
+                </p>
+                <div style="margin-top: 1rem; color: var(--premium-bronze);">
+                    <i class="fas fa-medal"></i> <span style="font-size: 0.8rem; font-weight: 600;">CERTIFIED
+                        QUALITY
+                        PARTNER</span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Akbar Sanitary Store. All Rights Reserved. | Designed for Excellence.
+        </div>
+    </footer>
+
+    <a href="https://wa.me/923211306560" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
