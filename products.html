@@ -12,8 +12,9 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    
+
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shop-style.css">
 </head>
 
 <body>
@@ -34,21 +35,21 @@
         <div class="menu-btn" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
         <nav id="navMenu">
             <a data-page="home" class="active" onclick="showPage('home')">Home</a>
-            <a data-page="products" onclick="showPage('products')">Products</a>
+            <a href="shop.html">Shop</a>
+            <a data-page="products" onclick="showPage('products')">Categories</a>
             <a data-page="about" onclick="showPage('about')">About Us</a>
-            <a data-page="faq" onclick="showPage('faq')">FAQs</a>
             <a data-page="contact" onclick="showPage('contact')">Contact Us</a>
         </nav>
-        <div class="header-icons">
-            <span>
-                <i class="fas fa-shopping-basket"></i>
+        <div class="header-right">
+            <a href="cart.html" class="cart-icon-wrap" title="View Cart">
+                <i class="fas fa-shopping-cart"></i>
                 <span class="cart-badge">0</span>
-            </span>
+            </a>
         </div>
     </header>
 
     <!-- HOME -->
-        <div id="products" class="page-section active">
+    <div id="products" class="page-section active">
         <div class="products-header">
             <h1 class="section-title" style="text-align: center; margin: 0 auto 1.5rem;">Our Product Catalog</h1>
             <p style="color: var(--medium-gray);">We deal in all kinds of premium plumbing and sanitary material</p>
@@ -73,7 +74,7 @@
                     </div>
                     <div class="product-card-info">
                         <h3>GI Fittings</h3>
-                        <p class="subtitle">All Sizes Available</p>
+                        <p class="subtitle">China HE Fitting</p>
                     </div>
                     <button class="btn btn-primary">Browse Category</button>
                 </div>
@@ -181,8 +182,7 @@
 
                 <div class="product-card" onclick="openSub('mirror-accessory')">
                     <div class="product-image-container">
-                        <img src="./mirror_accessory_main.png" alt="Mirror and Accessory set"
-                            class="product-image">
+                        <img src="./mirror_accessory_main.png" alt="Mirror and Accessory set" class="product-image">
                     </div>
                     <div class="product-card-info">
                         <h3>Mirror & Accessories</h3>
@@ -215,12 +215,75 @@
                 </div>
                 <div class="product-card" onclick="showPage('products-Plastic Sheets')">
                     <div class="product-image-container">
-                        <img src="./Waterproof Plastic Cover.png" alt="Waterproof Plastic Cover"
-                            class="product-image">
+                        <img src="./Waterproof Plastic Cover.png" alt="Waterproof Plastic Cover" class="product-image">
                     </div>
                     <div class="product-card-info">
                         <h3>Waterproof Plastic Sheets</h3>
                         <p class="subtitle">Royal & Terbela Waterproof Plastic Cover</p>
+                    </div>
+                    <button class="btn btn-primary">Browse Category</button>
+                </div>
+
+                <div class="product-card" onclick="showPage('products-automatic-machine-pipe')">
+                    <div class="product-image-container">
+                        <img src="./automatic-machine pipe"
+                            onerror="this.src='https://via.placeholder.com/400x250?text=Automatic+Machine+Pipe'"
+                            alt="Automatic Machine Pipe" class="product-image">
+                    </div>
+                    <div class="product-card-info">
+                        <h3>Automatic Machine Pipe</h3>
+                        <p class="subtitle">Automatic Machine Pipe & Bush</p>
+                    </div>
+                    <button class="btn btn-primary">Browse Category</button>
+                </div>
+
+                <div class="product-card" onclick="showPage('products-kitchen-hood-pipe')">
+                    <div class="product-image-container">
+                        <img src="./Kitchen Hood Pipe"
+                            onerror="this.src='https://via.placeholder.com/400x250?text=Kitchen+Hood+Pipe'"
+                            alt="Kitchen Hood Pipe" class="product-image">
+                    </div>
+                    <div class="product-card-info">
+                        <h3>Kitchen Hood Pipe</h3>
+                        <p class="subtitle">Kitchen Hood Pipe</p>
+                    </div>
+                    <button class="btn btn-primary">Browse Category</button>
+                </div>
+
+                <div class="product-card" onclick="showPage('products-wall-cover')">
+                    <div class="product-image-container">
+                        <img src="./Floor Waste"
+                            onerror="this.src='https://via.placeholder.com/400x250?text=Wall+Cover'" alt="Wall cover"
+                            class="product-image">
+                    </div>
+                    <div class="product-card-info">
+                        <h3>Wall cover</h3>
+                        <p class="subtitle">Wall cover</p>
+                    </div>
+                    <button class="btn btn-primary">Browse Category</button>
+                </div>
+
+                <div class="product-card" onclick="showPage('products-floor-waste')">
+                    <div class="product-image-container">
+                        <img src="./Floor Waste"
+                            onerror="this.src='https://via.placeholder.com/400x250?text=Floor+Waste'" alt="Floor Waste"
+                            class="product-image">
+                    </div>
+                    <div class="product-card-info">
+                        <h3>Floor Waste</h3>
+                        <p class="subtitle">Floor Waste</p>
+                    </div>
+                    <button class="btn btn-primary">Browse Category</button>
+                </div>
+
+                <div class="product-card" onclick="showPage('products-brass-gate-valve')">
+                    <div class="product-image-container">
+                        <img src="https://via.placeholder.com/400x250?text=Brass+Gate+Valve" alt="Brass Gate-Valve"
+                            class="product-image">
+                    </div>
+                    <div class="product-card-info">
+                        <h3>Brass Gate-Valve</h3>
+                        <p class="subtitle">1/2" to 2" Sizes Available</p>
                     </div>
                     <button class="btn btn-primary">Browse Category</button>
                 </div>
@@ -232,7 +295,7 @@
 
     <!-- SUBCATEGORY PAGES -->
     <!-- PPRC/PVC Selector -->
-<footer>
+    <footer>
         <div class="footer-grid">
             <div class="footer-col">
                 <a class="footer-logo" onclick="showPage('home')"><u>Akbar & Sons Sanitary Store </u><a>
@@ -303,7 +366,8 @@
 
     <a href="https://wa.me/923211306560" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
-    
+
+    <script src="cart.js"></script>
     <script src="script.js"></script>
 </body>
 

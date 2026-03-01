@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Product Detail – Akbar & Sons Sanitary Store</title>
+    <meta name="description" id="pageDesc" content="Product detail page">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shop-style.css">
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <span><i class="fas fa-phone-alt"></i> +92 3214715974</span>
+        <span><i class="fas fa-phone-alt"></i> +92 3211106560</span>
+        <span><i class="fas fa-phone-alt"></i> +92 3211306560</span>
+        <span>Lahore, Pakistan</span>
+    </div>
+
+    <header>
+        <div class="logo" onclick="window.location='index.html'">
+            <i class="fas fa-faucet-drip logo-icon"></i>
+            <span>Akbar &amp; Sons Sanitary Store</span>
+        </div>
+        <div class="menu-btn" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+        <nav id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="products.html">Categories</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <div class="header-right">
+            <a href="cart.html" class="cart-icon-wrap" id="cartIconWrap" title="View Cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-badge" id="cartBadge">0</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb-bar">
+        <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i>
+        <a href="shop.html">Shop</a> <i class="fas fa-chevron-right"></i>
+        <span id="breadcrumbName">Product</span>
+    </div>
+
+    <!-- PRODUCT DETAIL -->
+    <section class="detail-section" id="detailSection">
+
+        <div class="detail-gallery">
+            <div class="detail-img-main">
+                <img id="mainImage" src="" alt="Product"
+                    onerror="this.src='https://placehold.co/500x500/f5f5f5/999?text=Product'">
+                <span class="detail-sale-badge" id="detailSaleBadge" style="display:none;">Sale</span>
+            </div>
+        </div>
+
+        <div class="detail-info">
+            <h1 class="detail-title" id="detailTitle">Loading...</h1>
+
+            <!-- Star Rating -->
+            <div class="detail-rating">
+                <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="rating-count" id="ratingCount">(5.0 out of 5)</span>
+            </div>
+
+            <!-- Price -->
+            <div class="detail-price-row">
+                <span class="detail-old-price" id="detailOldPrice"></span>
+                <span class="detail-new-price" id="detailNewPrice"></span>
+                <span class="detail-discount" id="detailDiscount"></span>
+            </div>
+
+            <!-- Size/Diameter Selection -->
+            <div class="detail-sizes" id="detailSizes">
+                <label class="detail-label">Size / Diameter</label>
+                <div class="size-options" id="sizeOptions"></div>
+            </div>
+
+            <!-- Quantity -->
+            <div class="detail-qty-row">
+                <label class="detail-label">Quantity</label>
+                <div class="qty-control">
+                    <button class="qty-btn" id="qtyMinus" onclick="changeQty(-1)"><i class="fas fa-minus"></i></button>
+                    <input type="number" id="qtyInput" value="1" min="1" max="99" readonly>
+                    <button class="qty-btn" id="qtyPlus" onclick="changeQty(1)"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+
+            <!-- Trust badges -->
+            <div class="detail-trust">
+                <span><i class="fas fa-rotate-left"></i> 14 Days Easy Return</span>
+                <span><i class="fas fa-shield-halved"></i> Genuine Product</span>
+                <span><i class="fas fa-truck-fast"></i> Lahore Same Day</span>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="detail-actions">
+                <button class="shop-add-btn detail-cart-btn" id="addToCartBtn" onclick="addDetailToCart()">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+                <button class="buy-now-btn" id="buyNowBtn" onclick="buyNow()">
+                    Buy Now
+                </button>
+            </div>
+
+            <!-- WhatsApp Order -->
+            <a class="whatsapp-order-btn" id="whatsappBtn" href="#" target="_blank">
+                <i class="fab fa-whatsapp"></i> Order via WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- PRODUCT DESCRIPTION -->
+    <section class="detail-desc-section">
+        <h2 class="section-divider-title">Product Description</h2>
+        <p id="descriptionText" class="detail-desc-text">Loading description...</p>
+    </section>
+
+    <!-- YOU MAY ALSO LIKE -->
+    <section class="related-section section-padding section-alt">
+        <h2 class="section-title" style="text-align:center; margin-bottom:2rem;">You May Also Like</h2>
+        <div class="shop-grid" id="relatedGrid"></div>
+    </section>
+
+    <!-- CUSTOMER REVIEWS -->
+    <section class="review-section">
+        <h2 class="section-divider-title">Customer Reviews</h2>
+        <div class="review-summary">
+            <div class="review-score">
+                <span class="big-score">5.0</span>
+                <div class="stars big-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <span class="review-total" id="reviewTotal">Based on 1 review</span>
+            </div>
+            <div class="review-bars">
+                <div class="review-bar-row"><span>5 ★</span>
+                    <div class="bar-track">
+                        <div class="bar-fill" style="width:100%"></div>
+                    </div><span class="bar-count">1</span>
+                </div>
+                <div class="review-bar-row"><span>4 ★</span>
+                    <div class="bar-track">
+                        <div class="bar-fill" style="width:0%"></div>
+                    </div><span class="bar-count">0</span>
+                </div>
+                <div class="review-bar-row"><span>3 ★</span>
+                    <div class="bar-track">
+                        <div class="bar-fill" style="width:0%"></div>
+                    </div><span class="bar-count">0</span>
+                </div>
+                <div class="review-bar-row"><span>2 ★</span>
+                    <div class="bar-track">
+                        <div class="bar-fill" style="width:0%"></div>
+                    </div><span class="bar-count">0</span>
+                </div>
+                <div class="review-bar-row"><span>1 ★</span>
+                    <div class="bar-track">
+                        <div class="bar-fill" style="width:0%"></div>
+                    </div><span class="bar-count">0</span>
+                </div>
+            </div>
+            <button class="write-review-btn" onclick="toggleReviewForm()">
+                <i class="fas fa-pen"></i> Write a Review
+            </button>
+        </div>
+
+        <!-- Write review form -->
+        <div class="review-form" id="reviewForm" style="display:none;">
+            <h3>Share Your Experience</h3>
+            <div class="star-picker" id="starPicker">
+                <span onclick="setReviewStar(1)">&#9733;</span>
+                <span onclick="setReviewStar(2)">&#9733;</span>
+                <span onclick="setReviewStar(3)">&#9733;</span>
+                <span onclick="setReviewStar(4)">&#9733;</span>
+                <span onclick="setReviewStar(5)">&#9733;</span>
+            </div>
+            <input type="text" id="reviewName" placeholder="Your Name" class="review-input">
+            <textarea id="reviewText" placeholder="Write your review here..." class="review-textarea"
+                rows="4"></textarea>
+            <button class="shop-add-btn" onclick="submitReview()" style="width:auto;padding:12px 32px;">Submit
+                Review</button>
+        </div>
+
+        <!-- Dynamic reviews list -->
+        <div id="reviewsList"></div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a class="footer-logo" href="index.html"><u>Akbar &amp; Sons Sanitary Store</u></a>
+                <p style="color:rgba(255,255,255,0.6);margin-bottom:1.5rem;">The leading supplier of premium sanitary
+                    ware and plumbing solutions since 1994.</p>
+                <div class="header-icons" style="color:white;gap:1rem;font-size:1rem;">
+                    <a href="https://www.facebook.com/akbarsons"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/akbar__sanitary__store?igsh=MWt0MWFoZDlwMnF4cw=="><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/923211306560"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.tiktok.com/@akbarsons"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h5><b>Quick Links</b></h5>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="products.html">Categories</a></li>
+                    <li><a href="cart.html">🛒 View Cart</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Store Location</h5>
+                <p style="color:rgba(255,255,255,0.6);">Main Defence Ghazi Road, Lahore.<br>Call: 0321
+                    4715974<br>Mon–Sat: 9:00 AM – 8:00 PM</p>
+            </div>
+        </div>
+        <div class="copyright">&copy; 2026 Akbar Sanitary Store. All Rights Reserved.</div>
+    </footer>
+
+    <a href="https://wa.me/923211306560" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <div class="toast" id="toast"><i class="fas fa-check-circle"></i> <span id="toastMsg"></span></div>
+
+    <script src="cart.js"></script>
+    <script>
+        // Same product data (kept in sync with shop.html)
+        const PRODUCTS = [
+            { id: 'p001', name: 'Instant Hot Water Faucet', image: './electric tap.png', category: 'faucets', oldPrice: 8500, price: 6800, sale: true, sizes: ['Standard'], description: 'Electric instant hot water faucet with fast-heating technology for kitchens and bathrooms. Safe, reliable and energy efficient. Stainless steel body with anti-scald protection. Easy installation on standard tap connectors.' },
+            { id: 'p002', name: 'Basin Mixer Faucet', image: './Basin-Mixer.jpg', category: 'faucets', oldPrice: 4200, price: 3500, sale: true, sizes: ['Standard'], description: 'Premium chrome basin mixer faucet with smooth single-lever control. Elegant design fits modern bathrooms. Ceramic cartridge for drip-free operation and long life.' },
+            { id: 'p003', name: 'Kitchen Sink Mixer', image: './sink mixer.jpg', category: 'faucets', oldPrice: null, price: 4800, sale: false, sizes: ['Standard'], description: 'High-arc kitchen sink mixer with 360° swivel spout. Perfect for large sinks and heavy kitchen use. Includes all installation accessories.' },
+            { id: 'p004', name: 'Masjid Mixture Tap', image: './Masjid-Mixture.jpg', category: 'faucets', oldPrice: 1800, price: 1400, sale: true, sizes: ['Standard'], description: 'Specially designed Masjid Mixture Tap with anti-drip mechanism and durable chrome finish. Suitable for mosque ablution areas and public washrooms.' },
+            { id: 'p005', name: 'Head Shower Set', image: './head shower.jpeg', category: 'showers', oldPrice: 3500, price: 2800, sale: true, sizes: ['4 inch', '6 inch', '8 inch'], description: 'Overhead rain shower head with adjustable spray pattern. Provides a luxurious shower experience. Rust-proof stainless steel and chrome finish.' },
+            { id: 'p006', name: 'Toilet Hand Shower', image: './toilet shower.jpeg', category: 'showers', oldPrice: null, price: 950, sale: false, sizes: ['Standard'], description: 'Hygienic hand shower for toilet use. Includes copper rod, brass spring and durable hose pipe. Ideal for bathrooms without bidet.' },
+            { id: 'p007', name: 'PELL Shower Set', image: './PELL SHOWER SET .jpeg', category: 'showers', oldPrice: 9500, price: 7200, sale: true, sizes: ['Standard', 'Premium'], description: 'Complete shower set with overhead rain shower, hand shower, and sliding rail. Full chrome finish. Premium European design and heavy-duty construction.' },
+            { id: 'p008', name: 'Toilet Shower with Pipe', image: './Toilet-Shower with pipe.png', category: 'showers', oldPrice: null, price: 1200, sale: false, sizes: ['Standard'], description: 'Complete toilet shower with flexible stainless steel pipe. Easy installation and long service life. Prevents blockage with self-cleaning nozzles.' },
+            { id: 'p009', name: 'Chrome Shinner Polish', image: './SHINER.png', category: 'accessories', oldPrice: 650, price: 499, sale: true, sizes: ['200ml', '500ml'], description: 'Powerful chrome shinner that restores shine and removes stains from all chrome sanitary fittings. Leaves a protective coating preventing future tarnish.' },
+            { id: 'p010', name: 'Basin Waste Fitting', image: './baisanWaste.png', category: 'accessories', oldPrice: null, price: 350, sale: false, sizes: ['32mm', '40mm'], description: 'High-quality basin waste fitting with chrome cap. Easy installation and leak-free performance. Suits all standard wash basins.' },
+            { id: 'p011', name: 'Push Floor Waste', image: './push floor waste.jpg', category: 'accessories', oldPrice: 800, price: 620, sale: true, sizes: ['4 inch', '6 inch'], description: 'Push-type chrome floor waste for bathrooms. Anti-odor seal and heavy-duty construction. Easy to clean removable strainer basket.' },
+            { id: 'p012', name: 'Nozzle Cock Tap', image: './Nozzle-Cock.jpg', category: 'faucets', oldPrice: null, price: 720, sale: false, sizes: ['1/2"', '3/4"'], description: 'Brass nozzle cock with hose connection. Ideal for garden use, tank outlets and utility taps. Quarter-turn operation for easy control.' },
+            { id: 'p013', name: 'Mirror & Accessory Set', image: './MIRROR AND ACCES.jpg', category: 'accessories', oldPrice: 5500, price: 4200, sale: true, sizes: ['Standard'], description: 'Premium 5-piece bathroom accessory set with mirror, towel rod, toilet roll holder, soap dish and tumbler holder. All chrome finish for a matching modern look.' },
+            { id: 'p014', name: 'Bib Cock Single', image: './bib-cock-.jpg', category: 'faucets', oldPrice: null, price: 580, sale: false, sizes: ['1/2"', '3/4"'], description: 'Heavy duty brass bib cock with chrome plating. Quarter-turn ceramic disc cartridge for drip-free operation. Ideal for utility connections.' },
+            { id: 'p015', name: 'Double Bib Cock', image: './double bib cock.jpeg', category: 'faucets', oldPrice: 1200, price: 980, sale: true, sizes: ['1/2"', '3/4"'], description: 'Heavy-duty double bib cock for simultaneous hot and cold water connections. Chrome finish with rubber-sealed valves for leak-free use.' },
+            { id: 'p016', name: 'Vanity Push Waste', image: './Push_vanity_Waste.jpg', category: 'accessories', oldPrice: null, price: 450, sale: false, sizes: ['Standard'], description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish. Compatible with all standard 32mm and 40mm basin outlets.' }
+        ];
+
+        let currentProduct = null;
+        let selectedSize = '';
+        let reviewStar = 5;
+
+        // page init
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get('id');
+            currentProduct = PRODUCTS.find(p => p.id === id);
+
+            // If not found in local PRODUCTS array, build from URL params
+            // (used when clicking from category pages via product-enhancer.js)
+            if (!currentProduct && id) {
+                const name = decodeURIComponent(params.get('name') || 'Product');
+                const image = decodeURIComponent(params.get('image') || '');
+                const price = parseFloat(params.get('price')) || 0;
+                const oldPrice = parseFloat(params.get('oldPrice')) || null;
+                const sale = params.get('sale') === 'true';
+                const cat = decodeURIComponent(params.get('cat') || 'Products');
+
+                let sizesArr = ['Standard'];
+                try {
+                    const sizesRaw = params.get('sizes');
+                    if (sizesRaw) sizesArr = JSON.parse(decodeURIComponent(sizesRaw));
+                } catch (e) { }
+
+                currentProduct = {
+                    id,
+                    name,
+                    image,
+                    price,
+                    oldPrice,
+                    sale,
+                    sizes: sizesArr,
+                    category: cat.toLowerCase().replace(/\s+/g, '-'),
+                    description: `${name} – Premium quality product available at Akbar & Sons Sanitary Store. Located on Main Defence Ghazi Road, Lahore. Call 0321-4715974 for bulk pricing and availability.`,
+                    reviews: []
+                };
+            }
+
+            if (!currentProduct) {
+                document.getElementById('detailSection').innerHTML = '<div style="padding:60px;text-align:center;"><h2>Product not found.</h2><a href="shop.html" class="shop-add-btn" style="display:inline-block;margin-top:20px;">Back to Shop</a></div>';
+                return;
+            }
+
+            loadProduct(currentProduct);
+            renderRelated(currentProduct);
+            loadReviews(currentProduct.id);
+        });
+
+
+        function loadProduct(p) {
+            document.title = `${p.name} – Akbar & Sons Sanitary Store`;
+            document.getElementById('pageDesc').content = p.description.slice(0, 160);
+            document.getElementById('breadcrumbName').textContent = p.name;
+            document.getElementById('mainImage').src = p.image;
+            document.getElementById('mainImage').alt = p.name;
+            document.getElementById('detailTitle').textContent = p.name;
+            document.getElementById('descriptionText').textContent = p.description;
+
+            const rCount = p.reviews ? p.reviews.length : 0;
+            document.getElementById('ratingCount').textContent = `(5.0 out of 5 – ${rCount} review${rCount !== 1 ? 's' : ''})`;
+            document.getElementById('reviewTotal').textContent = `Based on ${rCount} review${rCount !== 1 ? 's' : ''}`;
+
+            // Prices
+            if (p.oldPrice) {
+                document.getElementById('detailOldPrice').textContent = `Rs.${p.oldPrice.toLocaleString()}`;
+                document.getElementById('detailOldPrice').style.display = 'inline';
+                const disc = Math.round((1 - p.price / p.oldPrice) * 100);
+                document.getElementById('detailDiscount').textContent = `-${disc}%`;
+                document.getElementById('detailDiscount').style.display = 'inline-block';
+            } else {
+                document.getElementById('detailOldPrice').style.display = 'none';
+                document.getElementById('detailDiscount').style.display = 'none';
+            }
+            document.getElementById('detailNewPrice').textContent = `Rs.${p.price.toLocaleString()}`;
+
+            // Sale badge
+            document.getElementById('detailSaleBadge').style.display = p.sale ? 'block' : 'none';
+
+            // Sizes & Dynamic Pricing
+            const sizeContainer = document.getElementById('detailSizes');
+            const sizeOptions = document.getElementById('sizeOptions');
+            sizeOptions.innerHTML = '';
+
+            if (p.sizes && p.sizes.length > 0 && !(p.sizes.length === 1 && (p.sizes[0] === 'Standard' || p.sizes[0].name === 'Standard'))) {
+                sizeContainer.style.display = 'block';
+
+                // Initialize selected size
+                let initialSize = p.sizes[0];
+                selectedSize = typeof initialSize === 'string' ? initialSize : initialSize.name;
+
+                p.sizes.forEach((s, i) => {
+                    const isObj = typeof s === 'object';
+                    const sizeName = isObj ? s.name : s;
+
+                    const btn = document.createElement('button');
+                    btn.className = 'size-btn' + (i === 0 ? ' selected' : '');
+                    btn.textContent = sizeName;
+
+                    btn.onclick = () => {
+                        document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('selected'));
+                        btn.classList.add('selected');
+                        selectedSize = sizeName;
+
+                        // Dynamic Price Update
+                        if (isObj && s.price) {
+                            // Update internal state
+                            currentProduct.price = s.price;
+                            currentProduct.oldPrice = s.oldPrice || null;
+
+                            // Visual update with animation
+                            updatePriceDisplay(currentProduct);
+                        }
+                    };
+                    sizeOptions.appendChild(btn);
+                });
+
+                // If the first size is an object with a price, apply it immediately
+                if (typeof initialSize === 'object' && initialSize.price) {
+                    currentProduct.price = initialSize.price;
+                    currentProduct.oldPrice = initialSize.oldPrice || null;
+                    updatePriceDisplay(currentProduct);
+                }
+            } else {
+                sizeContainer.style.display = 'none';
+                if (p.sizes && p.sizes.length > 0) {
+                    let first = p.sizes[0];
+                    selectedSize = typeof first === 'string' ? first : first.name;
+                } else {
+                    selectedSize = 'Standard';
+                }
+            }
+
+            // WhatsApp
+            updateWhatsAppLink();
+        }
+
+        function updatePriceDisplay(p) {
+            const oldPriceEl = document.getElementById('detailOldPrice');
+            const newPriceEl = document.getElementById('detailNewPrice');
+            const discountEl = document.getElementById('detailDiscount');
+
+            // Add animation class
+            newPriceEl.classList.remove('price-bump');
+            void newPriceEl.offsetWidth; // trigger reflow
+            newPriceEl.classList.add('price-bump');
+
+            if (p.oldPrice) {
+                oldPriceEl.textContent = `Rs.${p.oldPrice.toLocaleString()}`;
+                oldPriceEl.style.display = 'inline';
+                const disc = Math.round((1 - p.price / p.oldPrice) * 100);
+                discountEl.textContent = `-${disc}%`;
+                discountEl.style.display = 'inline-block';
+            } else {
+                oldPriceEl.style.display = 'none';
+                discountEl.style.display = 'none';
+            }
+            newPriceEl.textContent = `Rs.${p.price.toLocaleString()}`;
+
+            updateWhatsAppLink();
+        }
+
+        function updateWhatsAppLink() {
+            if (!currentProduct) return;
+            const waMsg = encodeURIComponent(`Hello! I want to order: ${currentProduct.name} (Size: ${selectedSize}) – Price: Rs.${currentProduct.price.toLocaleString()}. Please confirm availability.`);
+            document.getElementById('whatsappBtn').href = `https://wa.me/923211306560?text=${waMsg}`;
+        }
+
+        function changeQty(dir) {
+            const input = document.getElementById('qtyInput');
+            const val = parseInt(input.value) + dir;
+            if (val >= 1 && val <= 99) input.value = val;
+        }
+
+        function addDetailToCart() {
+            if (!currentProduct) return;
+            const qty = parseInt(document.getElementById('qtyInput').value) || 1;
+
+            Cart.addItem({
+                id: currentProduct.id,
+                name: currentProduct.name,
+                image: currentProduct.image,
+                price: currentProduct.price,
+                oldPrice: currentProduct.oldPrice,
+                size: selectedSize,
+                quantity: qty
+            });
+
+            const btn = document.getElementById('addToCartBtn');
+            btn.innerHTML = '<i class="fas fa-check"></i> Added to Cart!';
+            btn.classList.add('added');
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-shopping-cart"></i> Add to Cart';
+                btn.classList.remove('added');
+            }, 2000);
+
+            showToast(`"${currentProduct.name}" added to cart!`);
+        }
+
+        function buyNow() {
+            addDetailToCart();
+            setTimeout(() => { window.location.href = 'cart.html'; }, 400);
+        }
+
+        // RELATED PRODUCTS
+        function renderRelated(p) {
+            const grid = document.getElementById('relatedGrid');
+            const related = PRODUCTS.filter(x => x.id !== p.id && x.category === p.category).slice(0, 4);
+            if (!related.length) {
+                document.querySelector('.related-section').style.display = 'none';
+                return;
+            }
+            related.forEach(r => {
+                const saleHtml = r.sale ? `<span class="shop-badge-sale">Sale</span>` : '';
+                const oldHtml = r.oldPrice ? `<span class="shop-old-price">Rs.${r.oldPrice.toLocaleString()}</span>` : '';
+                const card = document.createElement('div');
+                card.className = 'shop-card';
+                card.innerHTML = `
+                    <div class="shop-card-img-wrap" onclick="window.location='product-detail.html?id=${r.id}'">
+                        ${saleHtml}
+                        <img src="${r.image}" alt="${r.name}" class="shop-card-img" loading="lazy"
+                             onerror="this.src='https://placehold.co/300x300/f5f5f5/999?text=Product'">
+                    </div>
+                    <div class="shop-card-body">
+                        <h3 class="shop-card-name" onclick="window.location='product-detail.html?id=${r.id}'">${r.name}</h3>
+                        <div class="shop-card-price-row">
+                            ${oldHtml}
+                            <span class="shop-new-price">Rs.${r.price.toLocaleString()}</span>
+                        </div>
+                        <button class="shop-add-btn" onclick="window.location='product-detail.html?id=${r.id}'">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>`;
+                grid.appendChild(card);
+            });
+        }
+
+        // REVIEWS
+        function getStoredReviews(id) {
+            try { return JSON.parse(localStorage.getItem('reviews_' + id)) || []; } catch { return []; }
+        }
+
+        function loadReviews(id) {
+            const stored = getStoredReviews(id);
+            const all = [...(currentProduct.reviews || []), ...stored];
+            const list = document.getElementById('reviewsList');
+            list.innerHTML = '';
+            if (!all.length) {
+                list.innerHTML = '<p style="text-align:center;color:var(--medium-gray);padding:20px;">No reviews yet. Be the first!</p>';
+                return;
+            }
+            all.forEach(r => {
+                const stars = '★'.repeat(r.rating || 5) + '☆'.repeat(5 - (r.rating || 5));
+                list.innerHTML += `
+                    <div class="review-item">
+                        <div class="review-item-header">
+                            <div class="reviewer-avatar">${(r.name || 'A')[0].toUpperCase()}</div>
+                            <div>
+                                <div class="reviewer-name">${r.name || 'Anonymous'}</div>
+                                <div class="review-stars">${stars}</div>
+                            </div>
+                        </div>
+                        <p class="review-comment">${r.comment || ''}</p>
+                    </div>`;
+            });
+        }
+
+        function toggleReviewForm() {
+            const form = document.getElementById('reviewForm');
+            form.style.display = form.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function setReviewStar(n) {
+            reviewStar = n;
+            const stars = document.querySelectorAll('#starPicker span');
+            stars.forEach((s, i) => s.style.color = i < n ? '#f5a623' : '#ccc');
+        }
+
+        function submitReview() {
+            const name = document.getElementById('reviewName').value.trim();
+            const text = document.getElementById('reviewText').value.trim();
+            if (!name || !text) { alert('Please fill in your name and review.'); return; }
+            const stored = getStoredReviews(currentProduct.id);
+            stored.push({ name, rating: reviewStar, comment: text });
+            localStorage.setItem('reviews_' + currentProduct.id, JSON.stringify(stored));
+            document.getElementById('reviewName').value = '';
+            document.getElementById('reviewText').value = '';
+            document.getElementById('reviewForm').style.display = 'none';
+            loadReviews(currentProduct.id);
+            showToast('Review submitted! Thank you.');
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2800);
+        }
+
+        function toggleMenu() {
+            document.getElementById('navMenu').classList.toggle('show');
+        }
+
+        // Init star picker colors
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('#starPicker span').forEach(s => s.style.color = '#f5a623');
+        });
+    </script>
+</body>
+
+</html>

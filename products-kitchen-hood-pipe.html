@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,6 +14,7 @@
 
     
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shop-style.css">
 </head>
 
 <body>
@@ -34,89 +35,119 @@
         <div class="menu-btn" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
         <nav id="navMenu">
             <a data-page="home" class="active" onclick="showPage('home')">Home</a>
-            <a data-page="products" onclick="showPage('products')">Products</a>
+            <a href="shop.html">Shop</a>
+            <a data-page="products" onclick="showPage('products')">Categories</a>
             <a data-page="about" onclick="showPage('about')">About Us</a>
             <a data-page="faq" onclick="showPage('faq')">FAQs</a>
             <a data-page="contact" onclick="showPage('contact')">Contact Us</a>
-        </nav>
-        <div class="header-icons">
-            <span>
-                <i class="fas fa-shopping-basket"></i>
-                <span class="cart-badge">0</span>
-            </span>
+        
+        <div class="header-right"><a href="cart.html" class="cart-icon-wrap" title="View Cart"><i class="fas fa-shopping-cart"></i><span class="cart-badge">0</span></a></div>
         </div>
+        
     </header>
 
     <!-- HOME -->
-        <div id="products-faucet-automatic-machine pipe" class="page-section active">
+        <div id="products-kitchen-hood-pipe" class="page-section active">
         <div class="products-header">
-            <h1>Automatic Machine Pipe</h1>
-            <p>Automatic Machine Pipe in various sizes</p>
+            <div class="breadcrumb" style="text-align: center; margin-bottom: 15px; color: var(--medium-gray); font-size: 0.9rem;">
+                <span onclick="showPage('home')" style="cursor: pointer;">Home</span> > 
+                <span onclick="showPage('products')" style="cursor: pointer;">Products</span> > 
+                <span style="color: var(--primary-teal);">Kitchen Hood Pipe</span>
+            </div>
+            <h1>Kitchen-Hood-Pipe</h1>
+            <p>Aluminium Kitchen Hood Pipe</p>
         </div>
         <div class="prod-grid">
             <div class="prod-item">
-                <div class="prod-img"><img src="https://.unsplash.com/photo-1582719478250-?auto=&fit=crop&w=1200&q=60"
-                        alt="Automatic Machine Pipe"></div>
+                <div class="prod-img"><img
+                        src="https://.unsplash.com/photo-1582719478250-?auto=format&fit=crop&w=1200&q=60"
+                        alt="Kitchen-Hood-Pipe"></div>
                 <div class="prod-info">
-                    <h3>Automatic Machine Pipe</h3>
-                    <p>Automatic Machine Pipe in 2meter length</p>
-                    <div class="prod-actions"><button class="btn" onclick="exploreMore('faucet')">Explore
-                            More</button>
+                    <h3>4" Kitchen-Hood-Pipe</h3>
+                    <p>Aluminium Kitchen Hood Pipe in 1.5Meter Length.</p>
+                    <div class="prod-actions"><button class="btn" onclick="exploreMore('kitchen hood pipe')">View Details</button>
                     </div>
                 </div>
             </div>
             <div class="prod-item">
                 <div class="prod-img"><img
                         src="https://.unsplash.com/photo-1582719478250-?auto=format&fit=crop&w=1200&q=60"
-                        alt="Automatic Machine Pipe"></div>
+                        alt="Kitchen-Hood-Pipe"></div>
                 <div class="prod-info">
-                    <h3>Automatic Machine Pipe</h3>
-                    <p>Automatic Machine Pipe in 3meter length</p>
-                    <div class="prod-actions"><button class="btn" onclick="exploreMore('faucet')">Explore
-                            More</button>
+                    <h3>4" Kitchen-Hood-Pipe</h3>
+                    <p>Aluminium Kitchen Hood Pipe in 2.5Meter Length.</p>
+                    <div class="prod-actions"><button class="btn" onclick="exploreMore('kitchen hood pipe')">View Details</button>
                     </div>
                 </div>
             </div>
             <div class="prod-item">
                 <div class="prod-img"><img
                         src="https://.unsplash.com/photo-1582719478250-?auto=format&fit=crop&w=1200&q=60"
-                        alt="Automatic Machine Pipe"></div>
+                        alt="Kitchen-Hood-Pipe"></div>
                 <div class="prod-info">
-                    <h3>Automatic Machine Pipe</h3>
-                    <p>Automatic Machine Pipe in 4meter length.</p>
-                    <div class="prod-actions"><button class="btn" onclick="exploreMore('faucet')">Explore
-                            More</button>
+                    <h3>4" Kitchen-Hood-Pipe</h3>
+                    <p>Aluminium Kitchen Hood Pipe in 3Meter Length.</p>
+                    <div class="prod-actions"><button class="btn" onclick="exploreMore('kitchen hood pipe')">View Details</button>
                     </div>
                 </div>
             </div>
             <div class="prod-item">
                 <div class="prod-img"><img
                         src="https://.unsplash.com/photo-1582719478250-?auto=format&fit=crop&w=1200&q=60"
-                        alt="Automatic Machine Pipe"></div>
+                        alt="Kitchen-Hood-Pipe"></div>
                 <div class="prod-info">
-                    <h3>Automatic Machine Pipe</h3>
-                    <p>Automatic Machine Pipe in 5meter length</p>
-                    <div class="prod-actions"><button class="btn" onclick="exploreMore('faucet')">Explore
-                            More</button>
+                    <h3>6" Kitchen-Hood-Pipe</h3>
+                    <p>Aluminium Kitchen Hood Pipe in 1.5Meter Length.</p>
+                    <div class="prod-actions"><button class="btn" onclick="exploreMore('kitchen hood pipe')">View Details</button>
                     </div>
                 </div>
             </div>
             <div class="prod-item">
                 <div class="prod-img"><img
                         src="https://.unsplash.com/photo-1582719478250-?auto=format&fit=crop&w=1200&q=60"
-                        alt="Automatic Machine Bush"></div>
+                        alt="Kitchen-Hood-Pipe"></div>
                 <div class="prod-info">
-                    <h3>Automatic Machine Bush</h3>
-                    <p>Automatic Machine Bush in Brass</p>
-                    <div class="prod-actions"><button class="btn" onclick="exploreMore('faucet')">Explore
-                            More</button>
+                    <h3>6" Kitchen-Hood-Pipe</h3>
+                    <p>Aluminium Kitchen Hood Pipe with 2.5Meter Length.</p>
+                    <div class="prod-actions"><button class="btn" onclick="exploreMore('kitchen hood pipe')">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="prod-item">
+                <div class="prod-img"><img src="https://images.unsplash.com/--63e3a8b0ab1b?=format&fit=crop&w=1200&q=60"
+                        alt="Kitchen-Hood-Pipe"></div>
+                <div class="prod-info">
+                    <h3>6" Kitchen-Hood-Pipe</h3>
+                    <p>Aluminium Kitchen Hood Pipe with 3Meter Length.</p>
+                    <div class="prod-actions"><button class="btn" onclick="exploreMore('kitchen hood pipe')">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="prod-item">
+                <div class="prod-img"><img
+                        src="https://.unsplash.com/photo-1582719478250-?auto=format&fit=crop&w=1200&q=60"
+                        alt="Kitchen-Hood-Pipe"></div>
+                <div class="prod-info">
+                    <h3>6" Kitchen-Hood-Pipe</h3>
+                    <p>Aluminium Kitchen Hood Pipe with 5Meter Length.</p>
+                    <div class="prod-actions"><button class="btn" onclick="exploreMore('kitchen hood pipe')">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="prod-item">
+                <div class="prod-img"><img
+                        src="https://.unsplash.com/photo-1582719478250-?auto=format&fit=crop&w=1200&q=60"
+                        alt="Kitchen-Hood-Pipe"></div>
+                <div class="prod-info">
+                    <h3>6" Kitchen-Hood-Pipe</h3>
+                    <p>Aluminium Kitchen Hood Pipe with 6Meter Length.</p>
+                    <div class="prod-actions"><button class="btn" onclick="exploreMore('kitchen hood pipe')">View Details</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- wall cover/Exhaust Fan Shutter  -->
+    <!-- automatic-machine-pipe -->
 <footer>
         <div class="footer-grid">
             <div class="footer-col">
@@ -137,7 +168,8 @@
             <div class="footer-col">
                 <h5><b>Quick Links</b></h5>
                 <ul class="footer-links">
-                    <li><a onclick="showPage('home')">Home</a></li>
+                    <li><a onclick="showPage('home')">Home</a>
+            <a href="shop.html">Shop</a></li>
                     <li><a onclick="showPage('products')">Product Catalog</a></li>
                     <li><a onclick="showPage('about')">Our History</a></li>
                     <li><a onclick="showPage('faq')">FAQs</a></li>
@@ -189,7 +221,10 @@
     <a href="https://wa.me/923211306560" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
     
+    <script src="searchData.js"></script>
     <script src="script.js"></script>
+    <script src="cart.js"></script>
+    <script src="product-enhancer.js"></script>
 </body>
 
 </html>

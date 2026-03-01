@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,6 +14,7 @@
 
     
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shop-style.css">
 </head>
 
 <body>
@@ -34,17 +35,15 @@
         <div class="menu-btn" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
         <nav id="navMenu">
             <a data-page="home" class="active" onclick="showPage('home')">Home</a>
-            <a data-page="products" onclick="showPage('products')">Products</a>
+            <a href="shop.html">Shop</a>
+            <a data-page="products" onclick="showPage('products')">Categories</a>
             <a data-page="about" onclick="showPage('about')">About Us</a>
             <a data-page="faq" onclick="showPage('faq')">FAQs</a>
             <a data-page="contact" onclick="showPage('contact')">Contact Us</a>
-        </nav>
-        <div class="header-icons">
-            <span>
-                <i class="fas fa-shopping-basket"></i>
-                <span class="cart-badge">0</span>
-            </span>
+        
+        <div class="header-right"><a href="cart.html" class="cart-icon-wrap" title="View Cart"><i class="fas fa-shopping-cart"></i><span class="cart-badge">0</span></a></div>
         </div>
+        
     </header>
 
     <!-- HOME -->
@@ -917,7 +916,8 @@
             <div class="footer-col">
                 <h5><b>Quick Links</b></h5>
                 <ul class="footer-links">
-                    <li><a onclick="showPage('home')">Home</a></li>
+                    <li><a onclick="showPage('home')">Home</a>
+            <a href="shop.html">Shop</a></li>
                     <li><a onclick="showPage('products')">Product Catalog</a></li>
                     <li><a onclick="showPage('about')">Our History</a></li>
                     <li><a onclick="showPage('faq')">FAQs</a></li>
@@ -969,7 +969,10 @@
     <a href="https://wa.me/923211306560" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
     
+    <script src="searchData.js"></script>
     <script src="script.js"></script>
+    <script src="cart.js"></script>
+    <script src="product-enhancer.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop – Akbar & Sons Sanitary Store</title>
+    <meta name="description"
+        content="Browse premium sanitary products at Akbar & Sons Sanitary Store. Faucets, commodes, pipes, showers and more with best prices in Lahore.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shop-style.css">
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <span><i class="fas fa-phone-alt"></i> +92 3214715974</span>
+        <span><i class="fas fa-phone-alt"></i> +92 3211106560</span>
+        <span><i class="fas fa-phone-alt"></i> +92 3211306560</span>
+        <span>Lahore, Pakistan</span>
+    </div>
+
+    <header>
+        <div class="logo" onclick="window.location='index.html'">
+            <i class="fas fa-faucet-drip logo-icon"></i>
+            <span>Akbar &amp; Sons Sanitary Store</span>
+        </div>
+        <div class="menu-btn" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+        <nav id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="shop.html" class="active">Shop</a>
+            <a href="products.html">Categories</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <div class="header-right">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search products..." autocomplete="off">
+                <i class="fas fa-search search-icon"></i>
+                <div class="search-results-dropdown" id="searchResults"></div>
+            </div>
+            <a href="cart.html" class="cart-icon-wrap" id="cartIconWrap" title="View Cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-badge" id="cartBadge">0</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="shop-hero">
+        <div class="shop-hero-content">
+            <h1>Our Shop</h1>
+            <p>Premium sanitary products at unbeatable prices</p>
+        </div>
+    </section>
+
+    <!-- FILTER BAR -->
+    <div class="filter-bar">
+        <div class="filter-bar-inner">
+            <div class="filter-tabs" id="filterTabs">
+                <button class="filter-tab active" data-cat="all" onclick="filterProducts('all',this)">All
+                    Products</button>
+                <button class="filter-tab" data-cat="faucets" onclick="filterProducts('faucets',this)">Faucets &amp;
+                    Mixers</button>
+                <button class="filter-tab" data-cat="sanitary" onclick="filterProducts('sanitary',this)">Sanitary
+                    Ware</button>
+                <button class="filter-tab" data-cat="showers" onclick="filterProducts('showers',this)">Showers</button>
+                <button class="filter-tab" data-cat="accessories"
+                    onclick="filterProducts('accessories',this)">Accessories</button>
+                <button class="filter-tab" data-cat="sale" onclick="filterProducts('sale',this)">🔥 On Sale</button>
+            </div>
+            <div class="sort-select-wrap">
+                <select id="sortSelect" onchange="sortProducts(this.value)">
+                    <option value="default">Sort: Default</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                    <option value="name-asc">Name: A–Z</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRODUCTS GRID -->
+    <section class="shop-section">
+        <div class="shop-grid" id="shopGrid">
+            <!-- Cards rendered by JS -->
+        </div>
+        <div class="no-products" id="noProducts" style="display:none;">
+            <i class="fas fa-box-open" style="font-size:3rem; color:var(--silver-light);"></i>
+            <p>No products found in this category.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a class="footer-logo" href="index.html"><u>Akbar &amp; Sons Sanitary Store</u></a>
+                <p style="color:rgba(255,255,255,0.6);margin-bottom:1.5rem;">The leading supplier of premium sanitary
+                    ware and plumbing solutions since 1994. Quality you can trust.</p>
+                <div class="header-icons" style="color:white;gap:1rem;font-size:1rem;">
+                    <a href="https://www.facebook.com/akbarsons"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/akbar__sanitary__store?igsh=MWt0MWFoZDlwMnF4cw=="><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/923211306560"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.tiktok.com/@akbarsons"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h5><b>Quick Links</b></h5>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="products.html">Product Catalog</a></li>
+                    <li><a href="about.html">Our History</a></li>
+                    <li><a href="contact.html">Connect With Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Support</h5>
+                <ul class="footer-links">
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-conditions.html">Terms &amp; Conditions</a></li>
+                    <li><a href="exchange-return.html">Exchange &amp; Return</a></li>
+                    <li><a href="refund-policy.html">Refund Policy</a></li>
+                    <li><a href="cart.html">🛒 View Cart</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Store Location</h5>
+                <p style="color:rgba(255,255,255,0.6);">Main Defence Ghazi Road, Lahore.<br>Call us: <u>0321
+                        4715974</u><br><u>0321 1106560</u><br><u>0321 1306560</u><br>Mon–Sat: 9:00 AM – 8:00
+                    PM<br>Sunday: 9:00 AM – 3:00 PM<br>Friday Break: 12:30 PM – 2:30 PM</p>
+            </div>
+        </div>
+        <div class="copyright">&copy; 2026 Akbar Sanitary Store. All Rights Reserved. | Designed for Excellence.</div>
+    </footer>
+
+    <a href="https://wa.me/923211306560" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- Toast notification -->
+    <div class="toast" id="toast"><i class="fas fa-check-circle"></i> <span id="toastMsg"></span></div>
+
+    <script src="cart.js"></script>
+    <script>
+        // =========================================================
+        // PRODUCT DATA – edit here to add/remove/update products
+        // =========================================================
+        const PRODUCTS = [
+            {
+                id: 'p001',
+                name: 'Instant Hot Water Faucet',
+                image: './electric tap.png',
+                category: 'faucets',
+                oldPrice: 8500,
+                price: 6800,
+                sale: true,
+                sizes: ['Standard'],
+                description: 'Electric instant hot water faucet with fast-heating technology for kitchens and bathrooms. Safe, reliable and energy efficient.',
+                reviews: [{ name: 'Ahmed K.', rating: 5, comment: 'Excellent product! Works perfectly in cold weather.' }]
+            },
+            {
+                id: 'p002',
+                name: 'Basin Mixer Faucet',
+                image: './Basin-Mixer.jpg',
+                category: 'faucets',
+                oldPrice: 4200,
+                price: 3500,
+                sale: true,
+                sizes: ['Standard'],
+                description: 'Premium chrome basin mixer faucet with smooth single-lever control. Elegant design fits modern bathrooms.',
+                reviews: [{ name: 'Zara M.', rating: 5, comment: 'Beautiful finish, smooth operation.' }]
+            },
+            {
+                id: 'p003',
+                name: 'Kitchen Sink Mixer',
+                image: './sink mixer.jpg',
+                category: 'faucets',
+                oldPrice: null,
+                price: 4800,
+                sale: false,
+                sizes: ['Standard'],
+                description: 'High-arc kitchen sink mixer with 360° swivel spout. Perfect for large sinks and heavy kitchen use.',
+                reviews: []
+            },
+            {
+                id: 'p004',
+                name: 'Masjid Mixture Tap',
+                image: './Masjid-Mixture.jpg',
+                category: 'faucets',
+                oldPrice: 1800,
+                price: 1400,
+                sale: true,
+                sizes: ['Standard'],
+                description: 'Specially designed Masjid Mixture Tap with anti-drip mechanism and durable chrome finish.',
+                reviews: [{ name: 'Bilal A.', rating: 4, comment: 'Good quality for the price, very durable.' }]
+            },
+            {
+                id: 'p005',
+                name: 'Head Shower Set',
+                image: './head shower.jpeg',
+                category: 'showers',
+                oldPrice: 3500,
+                price: 2800,
+                sale: true,
+                sizes: ['4 inch', '6 inch', '8 inch'],
+                description: 'Overhead rain shower head with adjustable spray pattern. Provides a luxurious shower experience.',
+                reviews: [{ name: 'Sara N.', rating: 5, comment: 'Amazing water pressure.' }]
+            },
+            {
+                id: 'p006',
+                name: 'Toilet Hand Shower',
+                image: './toilet shower.jpeg',
+                category: 'showers',
+                oldPrice: null,
+                price: 950,
+                sale: false,
+                sizes: ['Standard'],
+                description: 'Hygienic hand shower for toilet use. Includes copper rod, brass spring and durable hose pipe.',
+                reviews: []
+            },
+            {
+                id: 'p007',
+                name: 'PELL Shower Set',
+                image: './PELL SHOWER SET .jpeg',
+                category: 'showers',
+                oldPrice: 9500,
+                price: 7200,
+                sale: true,
+                sizes: ['Standard', 'Premium'],
+                description: 'Complete shower set with overhead rain shower, hand shower, and body jets. Full chrome finish.',
+                reviews: [{ name: 'Usman H.', rating: 5, comment: 'Premium quality, worth every rupee!' }]
+            },
+            {
+                id: 'p008',
+                name: 'Toilet Shower with Pipe',
+                image: './Toilet-Shower with pipe.png',
+                category: 'showers',
+                oldPrice: null,
+                price: 1200,
+                sale: false,
+                sizes: ['Standard'],
+                description: 'Complete toilet shower with flexible stainless steel pipe. Easy installation and long service life.',
+                reviews: []
+            },
+            {
+                id: 'p009',
+                name: 'Chrome Shinner Polish',
+                image: './SHINER.png',
+                category: 'accessories',
+                oldPrice: 650,
+                price: 499,
+                sale: true,
+                sizes: ['200ml', '500ml'],
+                description: 'Powerful chrome shinner that restores shine and removes stains from all chrome sanitary fittings. Leaves a protective coating.',
+                reviews: [{ name: 'Imran T.', rating: 5, comment: 'Works like magic on chrome.' }]
+            },
+            {
+                id: 'p010',
+                name: 'Basin Waste Fitting',
+                image: './baisanWaste.png',
+                category: 'accessories',
+                oldPrice: null,
+                price: 350,
+                sale: false,
+                sizes: ['32mm', '40mm'],
+                description: 'High-quality basin waste fitting with chrome cap. Easy installation and leak-free performance.',
+                reviews: []
+            },
+            {
+                id: 'p011',
+                name: 'Push Floor Waste',
+                image: './push floor waste.jpg',
+                category: 'accessories',
+                oldPrice: 800,
+                price: 620,
+                sale: true,
+                sizes: ['4 inch', '6 inch'],
+                description: 'Push-type chrome floor waste for bathrooms. Anti-odor seal and heavy-duty construction.',
+                reviews: [{ name: 'Fatima R.', rating: 4, comment: 'Good quality and easy to install.' }]
+            },
+            {
+                id: 'p012',
+                name: 'Nozzle Cock Tap',
+                image: './Nozzle-Cock.jpg',
+                category: 'faucets',
+                oldPrice: null,
+                price: 720,
+                sale: false,
+                sizes: ['1/2"', '3/4"'],
+                description: 'Brass nozzle cock with hose connection. Ideal for garden use, tank outlets and utility taps.',
+                reviews: []
+            },
+            {
+                id: 'p013',
+                name: 'Mirror & Accessory Set',
+                image: './MIRROR AND ACCES.jpg',
+                category: 'accessories',
+                oldPrice: 5500,
+                price: 4200,
+                sale: true,
+                sizes: ['Standard'],
+                description: 'Premium 5-piece bathroom accessory set with mirror, towel rod, toilet roll holder, soap dish and tumbler holder.',
+                reviews: [{ name: 'Hina S.', rating: 5, comment: 'Beautiful set, matches modern decor perfectly.' }]
+            },
+            {
+                id: 'p014',
+                name: 'Bib Cock Single',
+                image: './bib-cock-.jpg',
+                category: 'faucets',
+                oldPrice: null,
+                price: 580,
+                sale: false,
+                sizes: ['1/2"', '3/4"'],
+                description: 'Heavy duty brass bib cock with chrome plating. Quarter-turn ceramic disc cartridge for drip-free operation.',
+                reviews: []
+            },
+            {
+                id: 'p015',
+                name: 'Double Bib Cock',
+                image: './double bib cock.jpeg',
+                category: 'faucets',
+                oldPrice: 1200,
+                price: 980,
+                sale: true,
+                sizes: ['1/2"', '3/4"'],
+                description: 'Heavy-duty double bib cock for simultaneous hot and cold water connections. Chrome finish.',
+                reviews: [{ name: 'Malik J.', rating: 4, comment: 'Solid brass, works perfectly.' }]
+            },
+            {
+                id: 'p016',
+                name: 'Vanity Push Waste',
+                image: './Push_vanity_Waste.jpg',
+                category: 'accessories',
+                oldPrice: null,
+                price: 450,
+                sale: false,
+                sizes: ['Standard'],
+                description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
+                reviews: []
+            }
+        ];
+
+        let filteredProducts = [...PRODUCTS];
+        let currentFilter = 'all';
+
+        // =========================================================
+        // RENDER
+        // =========================================================
+        function renderProducts(list) {
+            const grid = document.getElementById('shopGrid');
+            const none = document.getElementById('noProducts');
+            grid.innerHTML = '';
+
+            if (!list || list.length === 0) {
+                none.style.display = 'flex';
+                return;
+            }
+            none.style.display = 'none';
+
+            list.forEach(p => {
+                const discount = p.oldPrice ? Math.round((1 - p.price / p.oldPrice) * 100) : 0;
+                const saleHtml = p.sale ? `<span class="shop-badge-sale">Sale</span>` : '';
+                const oldPriceHtml = p.oldPrice ? `<span class="shop-old-price">Rs.${p.oldPrice.toLocaleString()}</span>` : '';
+
+                // Check if product requires size selection (has object sizes)
+                const hasVariations = p.sizes && typeof p.sizes[0] === 'object';
+                const dsPrice = p.price || (hasVariations && p.sizes[0].price ? p.sizes[0].price : 0);
+
+                let btnHtml = '';
+                if (hasVariations) {
+                    btnHtml = `<button class="shop-add-btn" onclick="goToDetail('${p.id}')"><i class="fas fa-list"></i> Select Size</button>`;
+                } else {
+                    btnHtml = `<button class="shop-add-btn" onclick="handleAddToCart(event,'${p.id}')"><i class="fas fa-shopping-cart"></i> Add to Cart</button>`;
+                }
+
+                const card = document.createElement('div');
+                card.className = 'shop-card';
+                card.setAttribute('data-id', p.id);
+                card.setAttribute('data-cat', p.category);
+
+                card.innerHTML = `
+                    <div class="shop-card-img-wrap" onclick="goToDetail('${p.id}')">
+                        ${saleHtml}
+                        <img src="${p.image}" alt="${p.name}" class="shop-card-img" loading="lazy"
+                             onerror="this.src='https://placehold.co/300x300/f5f5f5/999?text=Product'">
+                    </div>
+                    <div class="shop-card-body">
+                        <h3 class="shop-card-name" onclick="goToDetail('${p.id}')">${p.name}</h3>
+                        <div class="shop-card-price-row">
+                            ${oldPriceHtml}
+                            <span class="shop-new-price">Rs.${dsPrice.toLocaleString()}</span>
+                        </div>
+                        ${btnHtml}
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // =========================================================
+        // FILTER & SORT
+        // =========================================================
+        function filterProducts(cat, btn) {
+            currentFilter = cat;
+            document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
+            if (btn) btn.classList.add('active');
+
+            filteredProducts = cat === 'all' ? [...PRODUCTS]
+                : cat === 'sale' ? PRODUCTS.filter(p => p.sale)
+                    : PRODUCTS.filter(p => p.category === cat);
+
+            sortProducts(document.getElementById('sortSelect').value);
+        }
+
+        function sortProducts(val) {
+            let list = [...filteredProducts];
+            if (val === 'price-asc') list.sort((a, b) => a.price - b.price);
+            else if (val === 'price-desc') list.sort((a, b) => b.price - a.price);
+            else if (val === 'name-asc') list.sort((a, b) => a.name.localeCompare(b.name));
+            renderProducts(list);
+        }
+
+        // =========================================================
+        // CART ACTIONS
+        // =========================================================
+        function handleAddToCart(e, productId) {
+            e.stopPropagation();
+            const p = PRODUCTS.find(x => x.id === productId);
+            if (!p) return;
+
+            Cart.addItem({
+                id: p.id,
+                name: p.name,
+                image: p.image,
+                price: p.price,
+                oldPrice: p.oldPrice,
+                size: p.sizes[0] || 'Standard',
+                quantity: 1
+            });
+
+            showToast(`"${p.name}" added to cart!`);
+
+            // Animate button
+            const btn = e.currentTarget;
+            btn.innerHTML = '<i class="fas fa-check"></i> Added!';
+            btn.classList.add('added');
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-shopping-cart"></i> Add to Cart';
+                btn.classList.remove('added');
+            }, 1800);
+        }
+
+        function goToDetail(productId) {
+            window.location.href = `product-detail.html?id=${productId}`;
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2800);
+        }
+
+        // =========================================================
+        // HEADER NAV / SEARCH
+        // =========================================================
+        function toggleMenu() {
+            document.getElementById('navMenu').classList.toggle('show');
+        }
+
+        // search (lightweight inline search)
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts(PRODUCTS);
+
+            const input = document.getElementById('searchInput');
+            const results = document.getElementById('searchResults');
+            if (!input) return;
+
+            input.addEventListener('input', function () {
+                const q = this.value.trim().toLowerCase();
+                results.innerHTML = '';
+                if (!q) { results.style.display = 'none'; return; }
+
+                const matches = PRODUCTS.filter(p =>
+                    p.name.toLowerCase().includes(q) || p.category.toLowerCase().includes(q)
+                ).slice(0, 8);
+
+                if (!matches.length) {
+                    results.innerHTML = '<div class="search-no-result">No products found</div>';
+                } else {
+                    matches.forEach(p => {
+                        const el = document.createElement('a');
+                        el.classList.add('search-result-item');
+                        el.href = `product-detail.html?id=${p.id}`;
+                        el.innerHTML = `<img src="${p.image}" class="search-result-img" onerror="this.src='https://placehold.co/45/f5f5f5/999?text=P'"><div class="search-result-info"><div class="search-result-name">${p.name}</div><div class="search-result-category">Rs.${p.price.toLocaleString()}</div></div>`;
+                        results.appendChild(el);
+                    });
+                }
+                results.style.display = 'block';
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!input.contains(e.target) && !results.contains(e.target)) {
+                    results.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
