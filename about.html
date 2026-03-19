@@ -39,11 +39,10 @@
             <a data-page="faq" onclick="showPage('faq')">FAQs</a>
             <a data-page="contact" onclick="showPage('contact')">Contact Us</a>
         </nav>
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Search for products (PPRC, PVC, GI, Faucets, Basin...)" autocomplete="off">
-            <i class="fas fa-search search-icon" id="searchIcon"></i>
-            <span class="loading-icon" id="loadingIcon"><i class="fas fa-spinner"></i></span>
-            <div class="search-results-dropdown" id="searchResults"></div>
+        
+            <div class="search-popup-trigger" onclick="openSearch()" title="Search Products">
+                <i class="fas fa-search"></i>
+            </div>
         </div>
         
     </header>

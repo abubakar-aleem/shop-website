@@ -1,20 +1,43 @@
 const fs = require('fs');
 const path = require('path');
 
-const dir = 'c:\\\\Users\\\\lenovo\\\\Desktop\\\\web shop\\\\shoppic';
+const directoryPath = 'c:\\Users\\lenovo\\Desktop\\web shop\\shoppic';
 
-const regex = /<div class="header-icons">\s*<span>\s*<i class="fas fa-shopping-basket"><\/i>\s*<span class="cart-badge">0<\/span>\s*<\/span>\s*<\/div>/g;
+function removeShoppingBasket(filePath) {
+    let content = fs.readFileSync(filePath, 'utf8');
 
-fs.readdirSync(dir).forEach(file => {
-    if (!file.endsWith('.html')) return;
+    // Pattern to match the header-icons div containing fa-shopping-basket
+    // Note: In products-gi.html it looked like:
+    /*
+    <div class="header-icons">
+        <span>
+            <i class="fas fa-shopping-basket"></i>
+            <span class="cart-badge">0</span>
+        </span>
+    </div>
+    */
 
-    const p = path.join(dir, file);
-    let original = fs.readFileSync(p, 'utf8');
+    const pattern = /<div class="header-icons">\s*<span>\s*<i class="fas fa-shopping-basket"><\/i>\s*<span class="cart-badge">\d+<\/span>\s*<\/span>\s*<\/div>/g;
 
-    if (regex.test(original)) {
-        let updated = original.replace(regex, '');
-        fs.writeFileSync(p, updated);
-        console.log('Removed from: ' + file);
+    if (pattern.test(content)) {
+        const newContent = content.replace(pattern, '');
+        fs.writeFileSync(filePath, newContent, 'utf8');
+        return true;
+    }
+    return false;
+}
+
+const files = fs.readdirSync(directoryPath);
+let count = 0;
+
+files.forEach(file => {
+    if (file.endsWith('.html')) {
+        const fullPath = path.join(directoryPath, file);
+        if (removeShoppingBasket(fullPath)) {
+            console.log(`Updated: ${file}`);
+            count++;
+        }
     }
 });
-console.log('Done');
+
+console.log(`Total files updated: ${count}`);

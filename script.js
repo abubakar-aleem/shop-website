@@ -95,6 +95,69 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Search functionality
 document.addEventListener('DOMContentLoaded', () => {
+    // Inject Search Modal UX dynamically to avoid editing all HTML pages
+    const searchContainer = document.querySelector('.search-container');
+    let searchToggleBtn = null;
+    let searchModal = null;
+
+    if (searchContainer && searchContainer.parentNode) {
+        // Create toggle icon for header
+        searchToggleBtn = document.createElement('i');
+        searchToggleBtn.className = 'fas fa-search header-search-toggle';
+        searchToggleBtn.title = 'Search products for...';
+
+        // Insert toggle before the container
+        searchContainer.parentNode.insertBefore(searchToggleBtn, searchContainer);
+
+        // Create modal wrapper
+        searchModal = document.createElement('div');
+        searchModal.id = 'searchModal';
+        searchModal.className = 'search-modal';
+
+        const modalContent = document.createElement('div');
+        modalContent.className = 'search-modal-content';
+
+        const closeBtn = document.createElement('span');
+        closeBtn.className = 'close-search';
+        closeBtn.innerHTML = '&times;';
+
+        const modalInner = document.createElement('div');
+        modalInner.className = 'search-modal-inner';
+
+        // Move container inside modal
+        modalContent.appendChild(closeBtn);
+        modalContent.appendChild(searchContainer);
+        searchModal.appendChild(modalContent);
+        document.body.appendChild(searchModal);
+
+        // Event listeners for open/close
+        const searchInput = document.getElementById('searchInput');
+        if (searchInput) searchInput.placeholder = 'Search for products...';
+
+        searchToggleBtn.addEventListener('click', () => {
+            searchModal.classList.add('active');
+            setTimeout(() => { if (searchInput) searchInput.focus(); }, 100);
+        });
+
+        const closeModal = () => {
+            searchModal.classList.remove('active');
+            if (searchInput) {
+                searchInput.value = '';
+                searchInput.dispatchEvent(new Event('input')); // trigger clean up
+            }
+        };
+
+        closeBtn.addEventListener('click', closeModal);
+        searchModal.addEventListener('click', (e) => {
+            if (e.target === searchModal) closeModal();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && searchModal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    }
+
     const searchInput = document.getElementById('searchInput');
     const searchResults = document.getElementById('searchResults');
     const searchIcon = document.getElementById('searchIcon');
@@ -244,5 +307,9 @@ document.addEventListener('DOMContentLoaded', () => {
             searchResults.style.display = 'block';
         }
     });
+
+    // Handle initial state if opened without input
+    if (searchIcon) searchIcon.style.display = 'block';
+    if (loadingIcon) loadingIcon.style.display = 'none';
 });
 
