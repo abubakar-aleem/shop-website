@@ -92,7 +92,7 @@
                 style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:3rem;">
                 <h2 class="section-title" style="margin-bottom:0;">Featured Products</h2>
             </div>
-            <div class="shop-grid">
+            <div class="shop-grid" style="justify-content: center;">
                 <!-- Product 1 -->
                 <div class="shop-card">
                     <div class="shop-card-img-wrap" onclick="window.location='product-detail.html?id=p001'">
@@ -171,27 +171,29 @@
                     </div>
                 </div>
 
-                <!-- Hot Deals & Discounts Card -->
-                <div class="shop-card"
-                    style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;background:linear-gradient(135deg, var(--premium-bronze), #1a150f);border-radius:12px;cursor:pointer;transition:var(--transition);text-align:center;padding:1.5rem;box-shadow:var(--shadow-subtle);"
-                    onclick="window.location='shop.html'"
-                    onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.2)'"
-                    onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='var(--shadow-subtle)'">
-                    <div
-                        style="width: 50px;height: 50px;background: rgba(255,255,255,0.15);border-radius: 50%;display:flex;align-items:center;justify-content:center;margin-bottom: 15px;backdrop-filter: blur(8px);border: 1px solid rgba(255,255,255,0.25);">
-                        <i class="fas fa-gem" style="font-size: 1.3rem; color: var(--white);"></i>
+                <!-- Product 5 -->
+                <div class="shop-card">
+                    <div class="shop-card-img-wrap" onclick="window.location='product-detail.html?id=p013'">
+                        <span class="shop-badge-sale">Sale</span>
+                        <img src="./MIRROR AND ACCES.jpg" alt="Mirror & Accessory Set" class="shop-card-img">
                     </div>
-                    <h3
-                        style="color: var(--white); font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; line-height: 1.2;">
-                        Hot Deals &<br>Discounts</h3>
-                    <p
-                        style="color: rgba(255,255,255,0.85); font-size: 0.88rem; margin-bottom: 20px; line-height: 1.4; font-weight: 400;">
-                        Grab our top-selling premium items at exclusive discounted prices.</p>
-                    <div
-                        style="background:var(--white); color:var(--premium-bronze); font-weight:700; text-transform:uppercase; letter-spacing:0.5px; font-size:0.88rem; padding:10px 16px; border-radius: 6px; display: flex; align-items:center; justify-content:center; gap: 8px; width: 100%;">
-                        VIEW HOT DEALS <i class="fas fa-arrow-right" style="font-size: 0.8rem;"></i>
+                    <div class="shop-card-body">
+                        <h3 class="shop-card-name" onclick="window.location='product-detail.html?id=p013'">Mirror &amp;
+                            Accessory Set</h3>
+                        <div class="shop-card-price-row">
+                            <span class="shop-old-price">Rs.5,500</span>
+                            <span class="shop-new-price">Rs.4,200</span>
+                        </div>
+                        <button class="shop-add-btn"
+                            onclick="homeAddCart(event,'p013','Mirror & Accessory Set','./MIRROR AND ACCES.jpg',5500,4200)">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
                     </div>
                 </div>
+
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="shop.html" style="font-size: 0.95rem; font-weight: 500; color: var(--charcoal-gray); text-decoration: none; border-bottom: 1px solid transparent; padding-bottom: 3px; transition: var(--transition);" onmouseover="this.style.color='var(--primary-teal)'; this.style.borderBottom='1px solid var(--primary-teal)';" onmouseout="this.style.color='var(--charcoal-gray)'; this.style.borderBottom='1px solid transparent';">View Collection &rarr;</a>
             </div>
         </section>
 
