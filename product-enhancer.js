@@ -224,6 +224,24 @@ const PRICE_CATALOGUE = {
     'afzaal handle valve 1/2 inch': { price: 620, oldPrice: null, sale: false },
     'ss handle valve 1/2 inch': { price: 780, oldPrice: 900, sale: true },
     'sparco handle valve 1/2 inch': { price: 690, oldPrice: null, sale: false },
+    // ---- CHECK VALVES --------------------------------------
+    'tfe check valve 1/2 inch': { price: 850, oldPrice: 950, sale: true },
+    'tfe check valve 3/4 inch': { price: 1150, oldPrice: 1300, sale: true },
+    'tfe check valve 1 inch': { price: 1650, oldPrice: null, sale: false },
+    'tfe check valve 1-1/4 inch': { price: 2300, oldPrice: null, sale: false },
+    'tfe check valve 1-1/2 inch': { price: 2900, oldPrice: null, sale: false },
+    'tfe check valve 2 inches': { price: 3950, oldPrice: null, sale: false },
+    'roma check valve 1/2 inch': { price: 780, oldPrice: 850, sale: true },
+    'roma check valve 3/4 inch': { price: 1050, oldPrice: null, sale: false },
+    // ---- NO RETURN VALVES ----------------------------------
+    'citi no return valve 1/2 inch': { price: 750, oldPrice: 850, sale: true },
+    'citi no return valve 3/4 inch': { price: 1000, oldPrice: 1150, sale: true },
+    'citi no return valve 1 inch': { price: 1500, oldPrice: null, sale: false },
+    'citi no return valve 1-1/4 inch': { price: 2100, oldPrice: null, sale: false },
+    'citi no return valve 1-1/2 inch': { price: 2600, oldPrice: null, sale: false },
+    'citi no return valve 2 inches': { price: 3600, oldPrice: null, sale: false },
+    'tfe no return valve 1/2 inch': { price: 820, oldPrice: null, sale: false },
+    'rbs no return valve 1/2 inch': { price: 680, oldPrice: 750, sale: true },
 };
 
 // Generic fallback: used when no exact match found
@@ -351,66 +369,70 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // ── Replace/upgrade existing button ───────────────
-        const actions = item.querySelector('.prod-actions');
-        if (actions) {
-            // Remove old generic button
-            actions.innerHTML = '';
+        let actions = item.querySelector('.prod-actions');
+        if (!actions) {
+            actions = document.createElement('div');
+            actions.className = 'prod-actions';
+            prodInfo.appendChild(actions);
+        }
 
-            // Add to Cart or Select Size
-            const cartBtn = document.createElement('button');
-            cartBtn.className = 'shop-add-btn enhancer-cart-btn';
+        // Remove old generic button
+        actions.innerHTML = '';
 
-            // Custom coloring for GI Fittings page
-            if (document.getElementById('products-gi') || window.location.pathname.includes('products-gi.html')) {
-                const colors = ['#008080', '#B68B50', '#1E90FF']; // Teal, Bronze, Blue
-                cartBtn.style.backgroundColor = colors[idx % 3];
-                cartBtn.style.borderColor = colors[idx % 3];
-                cartBtn.style.color = '#ffffff';
-            }
+        // Add to Cart or Select Size
+        const cartBtn = document.createElement('button');
+        cartBtn.className = 'shop-add-btn enhancer-cart-btn';
 
-            if (hasVariations) {
-                cartBtn.innerHTML = '<i class="fas fa-list"></i> Select Size';
-                cartBtn.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    window.location.href = detailUrl;
-                });
-            } else {
-                cartBtn.innerHTML = '<i class="fas fa-shopping-cart"></i> Add to Cart';
-                cartBtn.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    if (typeof Cart !== 'undefined') {
-                        Cart.addItem({
-                            id: pid,
-                            name: rawName,
-                            image: imgSrc,
-                            price: parseFloat(displayPriceStr) || 0,
-                            oldPrice: data.oldPrice || null,
-                            size: 'Standard',
-                            quantity: 1
-                        });
-                    }
-                    cartBtn.innerHTML = '<i class="fas fa-check"></i> Added!';
-                    cartBtn.classList.add('added');
-                    showEnhancerToast(`"${rawName}" added to cart!`);
-                    setTimeout(() => {
-                        cartBtn.innerHTML = '<i class="fas fa-shopping-cart"></i> Add to Cart';
-                        cartBtn.classList.remove('added');
-                    }, 1900);
-                });
-            }
-            actions.appendChild(cartBtn);
+        // Custom coloring for GI Fittings page
+        if (document.getElementById('products-gi') || window.location.pathname.includes('products-gi.html')) {
+            const colors = ['#008080', '#B68B50', '#1E90FF']; // Teal, Bronze, Blue
+            cartBtn.style.backgroundColor = colors[idx % 3];
+            cartBtn.style.borderColor = colors[idx % 3];
+            cartBtn.style.color = '#ffffff';
+        }
 
-            // View Details
-            const detailBtn = document.createElement('button');
-            detailBtn.className = 'enhancer-detail-btn';
-            detailBtn.innerHTML = '<i class="fas fa-eye"></i>';
-            detailBtn.title = 'View Details';
-            detailBtn.addEventListener('click', (e) => {
+        if (hasVariations) {
+            cartBtn.innerHTML = '<i class="fas fa-list"></i> Select Size';
+            cartBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 window.location.href = detailUrl;
             });
-            actions.appendChild(detailBtn);
+        } else {
+            cartBtn.innerHTML = '<i class="fas fa-shopping-cart"></i> Add to Cart';
+            cartBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (typeof Cart !== 'undefined') {
+                    Cart.addItem({
+                        id: pid,
+                        name: rawName,
+                        image: imgSrc,
+                        price: parseFloat(displayPriceStr) || 0,
+                        oldPrice: data.oldPrice || null,
+                        size: 'Standard',
+                        quantity: 1
+                    });
+                }
+                cartBtn.innerHTML = '<i class="fas fa-check"></i> Added!';
+                cartBtn.classList.add('added');
+                showEnhancerToast(`"${rawName}" added to cart!`);
+                setTimeout(() => {
+                    cartBtn.innerHTML = '<i class="fas fa-shopping-cart"></i> Add to Cart';
+                    cartBtn.classList.remove('added');
+                }, 1900);
+            });
         }
+        actions.appendChild(cartBtn);
+
+        // View Details
+        const detailBtn = document.createElement('button');
+        detailBtn.className = 'enhancer-detail-btn';
+        detailBtn.innerHTML = '<i class="fas fa-eye"></i>';
+        detailBtn.title = 'View Details';
+        detailBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            window.location.href = detailUrl;
+        });
+        actions.appendChild(detailBtn);
     });
 
     // Header upgrade: add Shop link + cart icon if missing
@@ -431,6 +453,8 @@ function getCategoryFromPage() {
     if (path.includes('geysers')) return 'Geysers';
     if (path.includes('garden')) return 'Garden Pipes';
     if (path.includes('motor')) return 'Motors';
+    if (path.includes('check-valve')) return 'Check Valves';
+    if (path.includes('no-return-valve')) return 'No Return Valves';
     return 'Products';
 }
 

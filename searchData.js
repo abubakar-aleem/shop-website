@@ -11653,5 +11653,33 @@ const searchIndex = [
     "category": "Handle Valves",
     "image": "./handle valve.jpg",
     "url": "products-handle-valve.html"
+  },
+  {
+    "name": "TFE Check Valve",
+    "desc": "Heavy duty TFE check valve available in all sizes from 1/2\" to 2\".",
+    "category": "Check Valves",
+    "image": "https://via.placeholder.com/400x300?text=TFE+Check+Valve",
+    "url": "products-check-valve.html"
+  },
+  {
+    "name": "ROMA Check Valve",
+    "desc": "Premium ROMA check valve available in all sizes from 1/2\" to 2\".",
+    "category": "Check Valves",
+    "image": "https://via.placeholder.com/400x300?text=ROMA+Check+Valve",
+    "url": "products-check-valve.html"
+  },
+  {
+    "name": "CITI No Return Valve",
+    "desc": "Heavy duty CITI no return valve (vertical/horizontal) in all sizes.",
+    "category": "No Return Valves",
+    "image": "https://via.placeholder.com/400x300?text=CITI+No+Return+Valve",
+    "url": "products-no-return-valve.html"
+  },
+  {
+    "name": "RBS No Return Valve",
+    "desc": "Reliable RBS no return valve available in all sizes from 1/2\" to 2\".",
+    "category": "No Return Valves",
+    "image": "https://via.placeholder.com/400x300?text=RBS+No+Return+Valve",
+    "url": "products-no-return-valve.html"
   }
 ];
