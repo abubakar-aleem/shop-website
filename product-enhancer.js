@@ -209,6 +209,21 @@ const PRICE_CATALOGUE = {
     'brass gate valve 1-1/4"': { price: 1050, oldPrice: null, sale: false },
     'brass gate valve 1-1/2"': { price: 1350, oldPrice: null, sale: false },
     'brass gate valve 2"': { price: 1800, oldPrice: null, sale: false },
+    // ---- HANDLE VALVES -------------------------------------
+    'faisal handle valve 1/2 inch': { price: 650, oldPrice: 750, sale: true },
+    'faisal handle valve 3/4 inch': { price: 850, oldPrice: 950, sale: true },
+    'faisal handle valve 1 inch': { price: 1250, oldPrice: null, sale: false },
+    'faisal handle valve 1-1/4 inch': { price: 1750, oldPrice: null, sale: false },
+    'faisal handle valve 1-1/2 inch': { price: 2100, oldPrice: null, sale: false },
+    'faisal handle valve 2 inches': { price: 2800, oldPrice: null, sale: false },
+    'kitz handle valve 1/2 inch': { price: 720, oldPrice: 850, sale: true },
+    'kitz handle valve 3/4 inch': { price: 980, oldPrice: 1100, sale: true },
+    'kitz handle valve 1 inch': { price: 1450, oldPrice: null, sale: false },
+    'ktc handle valve 1/2 inch': { price: 580, oldPrice: 650, sale: true },
+    'dura handle valve 1/2 inch': { price: 650, oldPrice: null, sale: false },
+    'afzaal handle valve 1/2 inch': { price: 620, oldPrice: null, sale: false },
+    'ss handle valve 1/2 inch': { price: 780, oldPrice: 900, sale: true },
+    'sparco handle valve 1/2 inch': { price: 690, oldPrice: null, sale: false },
 };
 
 // Generic fallback: used when no exact match found
@@ -291,7 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
             displayPriceStr = data.sizes[0].price;
         }
 
-        const detailUrl = `product-detail.html?id=${encodeURIComponent(pid)}&name=${encodeURIComponent(rawName)}&image=${encodeURIComponent(imgSrc)}&price=${displayPriceStr}&oldPrice=${data.oldPrice || ''}&sale=${data.sale || false}&sizes=${sizesParam}&cat=${encodeURIComponent(getCategoryFromPage())}`;
+        const detailUrl = `product-detail.html?id=${encodeURIComponent(pid)}&name=${encodeURIComponent(rawName)}&image=${encodeURIComponent(imgSrc)}&price=${displayPriceStr}&oldPrice=${data.oldPrice || ''}&sale=${data.sale || false}&sizes=${sizesParam}&cat=${encodeURIComponent(getCategoryFromPage())}&source=category`;
 
         // ── Make image / name clickable ────────────────────
         if (img) {

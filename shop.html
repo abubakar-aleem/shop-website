@@ -151,8 +151,20 @@
         // PRODUCT DATA – edit here to add/remove/update products
         // =========================================================
         const PRODUCTS = [
+             {
+                id: 'p01',
+                name: 'Dura PPR-C Pipe PN-16',
+                image: 'pprc pipes.jpeg',
+                category: 'pipes',
+                oldPrice: 890,
+                price: 800,
+                sale: true,
+                sizes: ['25mm'],
+                description: 'Dura PPR-C Pipe PN-16 is a high-quality plumbing pipe suitable for hot and cold water distribution systems. Durable, leak-proof and easy to install.',
+                reviews: [{ name: 'Ahmed K.', rating: 5, comment: 'Excellent product! Works perfectly in cold weather.' }]
+            },
             {
-                id: 'p001',
+                id: 'p02',
                 name: 'Instant Hot Water Faucet',
                 image: './electric tap.png',
                 category: 'faucets',
@@ -164,7 +176,7 @@
                 reviews: [{ name: 'Ahmed K.', rating: 5, comment: 'Excellent product! Works perfectly in cold weather.' }]
             },
             {
-                id: 'p002',
+                id: 'p03',
                 name: 'Basin Mixer Faucet',
                 image: './Basin-Mixer.jpg',
                 category: 'faucets',
@@ -176,7 +188,7 @@
                 reviews: [{ name: 'Zara M.', rating: 5, comment: 'Beautiful finish, smooth operation.' }]
             },
             {
-                id: 'p003',
+                id: 'p04',
                 name: 'Kitchen Sink Mixer',
                 image: './sink mixer.jpg',
                 category: 'faucets',
@@ -188,7 +200,7 @@
                 reviews: []
             },
             {
-                id: 'p004',
+                id: 'p05',
                 name: 'Masjid Mixture Tap',
                 image: './Masjid-Mixture.jpg',
                 category: 'faucets',
@@ -200,7 +212,7 @@
                 reviews: [{ name: 'Bilal A.', rating: 4, comment: 'Good quality for the price, very durable.' }]
             },
             {
-                id: 'p005',
+                id: 'p06',
                 name: 'Head Shower Set',
                 image: './head shower.jpeg',
                 category: 'showers',
@@ -212,7 +224,7 @@
                 reviews: [{ name: 'Sara N.', rating: 5, comment: 'Amazing water pressure.' }]
             },
             {
-                id: 'p006',
+                id: 'p07',
                 name: 'Winner Toilet Shower',
                 image: './toilet shower.jpeg',
                 category: 'showers',
@@ -224,7 +236,7 @@
                 reviews: []
             },
             {
-                id: 'p007',
+                id: 'p08',
                 name: 'PELL Shower Set',
                 image: './PELL SHOWER SET .jpeg',
                 category: 'showers',
@@ -236,7 +248,7 @@
                 reviews: [{ name: 'Usman H.', rating: 5, comment: 'Premium quality, worth every rupee!' }]
             },
             {
-                id: 'p008',
+                id: 'p09',
                 name: 'Decent Toilet Shower with Pipe',
                 image: './Toilet-Shower with pipe.png',
                 category: 'showers',
@@ -248,7 +260,7 @@
                 reviews: []
             },
             {
-                id: 'p009',
+                id: 'p10',
                 name: 'Chrome Shinner Polish',
                 image: './SHINER.png',
                 category: 'accessories',
@@ -260,7 +272,7 @@
                 reviews: [{ name: 'Imran T.', rating: 5, comment: 'Works like magic on chrome.' }]
             },
             {
-                id: 'p010',
+                id: 'p11',
                 name: 'Basin Waste Fitting',
                 image: './baisanWaste.png',
                 category: 'accessories',
@@ -272,7 +284,7 @@
                 reviews: []
             },
             {
-                id: 'p011',
+                id: 'p12',
                 name: 'Push Floor Waste',
                 image: './push floor waste.jpg',
                 category: 'accessories',
@@ -284,7 +296,7 @@
                 reviews: [{ name: 'Fatima R.', rating: 4, comment: 'Good quality and easy to install.' }]
             },
             {
-                id: 'p012',
+                id: 'p13',
                 name: 'Nozzle Cock Tap',
                 image: './Nozzle-Cock.jpg',
                 category: 'faucets',
@@ -296,7 +308,7 @@
                 reviews: []
             },
             {
-                id: 'p013',
+                id: 'p14',
                 name: 'Mirror & Accessory Set',
                 image: './MIRROR AND ACCES.jpg',
                 category: 'accessories',
@@ -308,7 +320,7 @@
                 reviews: [{ name: 'Hina S.', rating: 5, comment: 'Beautiful set, matches modern decor perfectly.' }]
             },
             {
-                id: 'p014',
+                id: 'p15',
                 name: 'Bib Cock Single',
                 image: './bib-cock-.jpg',
                 category: 'faucets',
@@ -320,7 +332,7 @@
                 reviews: []
             },
             {
-                id: 'p015',
+                id: 'p16',
                 name: 'Double Bib Cock',
                 image: './double bib cock.jpeg',
                 category: 'faucets',
@@ -332,19 +344,19 @@
                 reviews: [{ name: 'Malik J.', rating: 4, comment: 'Solid brass, works perfectly.' }]
             },
             {
-                id: 'p016',
+                id: 'p17',
                 name: 'Vanity Push Waste',
                 image: './Push_vanity_Waste.jpg',
                 category: 'accessories',
                 oldPrice: null,
                 price: 450,
                 sale: false,
-                sizes: ['Standard'],
+                sizes: ['4"'],
                 description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
                 reviews: []
             },
             {
-                id: 'p017',
+                id: 'p18',
                 name: 'Spindle',
                 image: './spindle-.jpg',
                 category: 'accessories',
@@ -356,7 +368,7 @@
                 reviews: []
             },
             {
-                id: 'p018',
+                id: 'p19',
                 name: 'Waste pipe/ Drain pipe',
                 image: './wastepipe.jpeg',
                 category: 'accessories',
@@ -368,7 +380,7 @@
                 reviews: []
             },
             {
-                id: 'p019',
+                id: 'p20',
                 name: 'Complain waste pipe',
                 image: './wastepipe.jpg',
                 category: 'accessories',
@@ -380,7 +392,7 @@
                 reviews: []
             },
             {
-                id: 'p020',
+                id: 'p21',
                 name: '12 inches SS Bathroom Helping Handle Grip',
                 image: './commod handle.jpg',
                 category: 'accessories',
@@ -392,19 +404,91 @@
                 reviews: []
             },
             {
-                id: 'p021',
+                id: 'p22',
                 name: '14 inches SS Bathroom Helping Handle Grip',
                 image: './commod handle.jpg',
                 category: 'accessories',
                 oldPrice: 1200,
                 price: 980,
                 sale: true,
-                sizes: ['1/2"', '3/4"'],
+                sizes: ['14"'],
                 description: 'Heavy-duty double bib cock for simultaneous hot and cold water connections. Chrome finish.',
                 reviews: [{ name: 'Malik J.', rating: 4, comment: 'Solid brass, works perfectly.' }]
             },
             {
-                id: 'p022',
+                id: 'p23',
+                name: 'Baisan Bolt Kit',
+                image: './bkit.jpg',
+                category: 'accessories',
+                oldPrice: null,
+                price: 240,
+                sale: false,
+                sizes: ['Standard'],
+                description: '',
+                reviews: []
+            },
+             {
+                id: 'p24',
+                name: 'SS Baisan Bolt Kit',
+                image: './ssboltkit.jpg',
+                category: 'accessories',
+                oldPrice: null,
+                price: 290,
+                sale: false,
+                sizes: ['Standard'],
+                description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
+                reviews: []
+            },
+             {
+                id: 'p25',
+                name: '1/2 Dura Handle Valve',
+                image: './handle valve.jpg',
+                category: 'accessories',
+                oldPrice: null,
+                price: 650,
+                sale: false,
+                sizes: ['1/2'],
+                description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
+                reviews: []
+            },
+             {
+                id: 'p26',
+                 name: '3/4 Dura Handle Valve',
+                image: './handle valve.jpg',
+                category: 'accessories',
+                oldPrice: null,
+                price: 750,
+                sale: false,
+                sizes: ['3/4'],
+                description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
+                reviews: []
+            },
+             {
+                id: 'p27',
+                name: '6" Master Wave Floor Waste',
+                image: './wave waste.jpg',
+                category: 'accessories',
+                oldPrice: null,
+                price: 290,
+                sale: false,
+                sizes: ['Standard'],
+                description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
+                reviews: []
+            },
+             {
+                id: 'p28',
+                name: '6" PVC DELL Wave Floor Waste',
+                image: './wave waste.jpg',
+                category: 'accessories',
+                oldPrice: null,
+                price: 290,
+                sale: false,
+                sizes: ['Standard'],
+                description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
+                reviews: []
+            },
+             {
+                id: 'p29',
                 name: 'Vanity Push Waste',
                 image: './Push_vanity_Waste.jpg',
                 category: 'accessories',
@@ -415,6 +499,283 @@
                 description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
                 reviews: []
             },
+             {
+                id: 'p30',
+                name: 'Vanity Push Waste',
+                image: './Push_vanity_Waste.jpg',
+                category: 'accessories',
+                oldPrice: null,
+                price: 450,
+                sale: false,
+                sizes: ['Standard'],
+                description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
+                reviews: []
+            },
+             {
+                id: 'p31',
+                name: 'Vanity Push Waste',
+                image: './Push_vanity_Waste.jpg',
+                category: 'accessories',
+                oldPrice: null,
+                price: 450,
+                sale: false,
+                sizes: ['Standard'],
+                description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
+                reviews: []
+            },
+             {
+                id: 'p32',
+                name: 'Vanity Push Waste',
+                image: './Push_vanity_Waste.jpg',
+                category: 'accessories',
+                oldPrice: null,
+                price: 450,
+                sale: false,
+                sizes: ['Standard'],
+                description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
+                reviews: []
+            },
+             {
+                id: 'p33',
+                name: 'Vanity Push Waste',
+                image: './Push_vanity_Waste.jpg',
+                category: 'accessories',
+                oldPrice: null,
+                price: 450,
+                sale: false,
+                sizes: ['Standard'],
+                description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
+                reviews: []
+            },
+             {
+                id: 'p34',
+                name: 'Vanity Push Waste',
+                image: './Push_vanity_Waste.jpg',
+                category: 'accessories',
+                oldPrice: null,
+                price: 450,
+                sale: false,
+                sizes: ['Standard'],
+                description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
+                reviews: []
+            },
+             {
+                id: 'p35',
+                name: 'Vanity Push Waste',
+                image: './Push_vanity_Waste.jpg',
+                category: 'accessories',
+                oldPrice: null,
+                price: 450,
+                sale: false,
+                sizes: ['Standard'],
+                description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
+                reviews: []
+            },
+             {
+                id: 'p36',
+                name: 'Vanity Push Waste',
+                image: './Push_vanity_Waste.jpg',
+                category: 'accessories',
+                oldPrice: null,
+                price: 450,
+                sale: false,
+                sizes: ['Standard'],
+                description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
+                reviews: []
+            },
+             {
+                id: 'p37',
+                name: 'Vanity Push Waste',
+                image: './Push_vanity_Waste.jpg',
+                category: 'accessories',
+                oldPrice: null,
+                price: 450,
+                sale: false,
+                sizes: ['Standard'],
+                description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
+                reviews: []
+            },
+             {
+                id: 'p38',
+                name: 'Vanity Push Waste',
+                image: './Push_vanity_Waste.jpg',
+                category: 'accessories',
+                oldPrice: null,
+                price: 450,
+                sale: false,
+                sizes: ['Standard'],
+                description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
+                reviews: []
+            },
+             {
+                id: 'p39',
+                name: 'Vanity Push Waste',
+                image: './Push_vanity_Waste.jpg',
+                category: 'accessories',
+                oldPrice: null,
+                price: 450,
+                sale: false,
+                sizes: ['Standard'],
+                description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
+                reviews: []
+            },
+             {
+                id: 'p40',
+                name: 'Vanity Push Waste',
+                image: './Push_vanity_Waste.jpg',
+                category: 'accessories',
+                oldPrice: null,
+                price: 450,
+                sale: false,
+                sizes: ['Standard'],
+                description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
+                reviews: []
+            },
+             {
+                id: 'p41',
+                name: 'Vanity Push Waste',
+                image: './Push_vanity_Waste.jpg',
+                category: 'accessories',
+                oldPrice: null,
+                price: 450,
+                sale: false,
+                sizes: ['Standard'],
+                description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
+                reviews: []
+            },
+             {
+                id: 'p42',
+                name: 'Vanity Push Waste',
+                image: './Push_vanity_Waste.jpg',
+                category: 'accessories',
+                oldPrice: null,
+                price: 450,
+                sale: false,
+                sizes: ['Standard'],
+                description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
+                reviews: []
+            },
+             {
+                id: 'p43',
+                name: 'Vanity Push Waste',
+                image: './Push_vanity_Waste.jpg',
+                category: 'accessories',
+                oldPrice: null,
+                price: 450,
+                sale: false,
+                sizes: ['Standard'],
+                description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
+                reviews: []
+            },
+             {
+                id: 'p44',
+                name: 'Vanity Push Waste',
+                image: './Push_vanity_Waste.jpg',
+                category: 'accessories',
+                oldPrice: null,
+                price: 450,
+                sale: false,
+                sizes: ['Standard'],
+                description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
+                reviews: []
+            },
+             {
+                id: 'p45',
+                name: 'Vanity Push Waste',
+                image: './Push_vanity_Waste.jpg',
+                category: 'accessories',
+                oldPrice: null,
+                price: 450,
+                sale: false,
+                sizes: ['Standard'],
+                description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
+                reviews: []
+            },
+             {
+                id: 'p46',
+                name: 'Vanity Push Waste',
+                image: './Push_vanity_Waste.jpg',
+                category: 'accessories',
+                oldPrice: null,
+                price: 450,
+                sale: false,
+                sizes: ['Standard'],
+                description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
+                reviews: []
+            },
+             {
+                id: 'p47',
+                name: 'Vanity Push Waste',
+                image: './Push_vanity_Waste.jpg',
+                category: 'accessories',
+                oldPrice: null,
+                price: 450,
+                sale: false,
+                sizes: ['Standard'],
+                description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
+                reviews: []
+            },
+             {
+                id: 'p48',
+                name: 'Vanity Push Waste',
+                image: './Push_vanity_Waste.jpg',
+                category: 'accessories',
+                oldPrice: null,
+                price: 450,
+                sale: false,
+                sizes: ['Standard'],
+                description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
+                reviews: []
+            },
+             {
+                id: 'p49',
+                name: 'Vanity Push Waste',
+                image: './Push_vanity_Waste.jpg',
+                category: 'accessories',
+                oldPrice: null,
+                price: 450,
+                sale: false,
+                sizes: ['Standard'],
+                description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
+                reviews: []
+            },
+             {
+                id: 'p50',
+                name: 'Vanity Push Waste',
+                image: './Push_vanity_Waste.jpg',
+                category: 'accessories',
+                oldPrice: null,
+                price: 450,
+                sale: false,
+                sizes: ['Standard'],
+                description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
+                reviews: []
+            },
+             {
+                id: 'p51',
+                name: 'Vanity Push Waste',
+                image: './Push_vanity_Waste.jpg',
+                category: 'accessories',
+                oldPrice: null,
+                price: 450,
+                sale: false,
+                sizes: ['Standard'],
+                description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
+                reviews: []
+            },
+             {
+                id: 'p52',
+                name: 'Vanity Push Waste',
+                image: './Push_vanity_Waste.jpg',
+                category: 'accessories',
+                oldPrice: null,
+                price: 450,
+                sale: false,
+                sizes: ['Standard'],
+                description: 'Pop-up click clack Vanity Push Waste for wash basins. Brass body with chrome finish.',
+                reviews: []
+            },
+
         ];
 
         let filteredProducts = [...PRODUCTS];
@@ -528,7 +889,7 @@
         }
 
         function goToDetail(productId) {
-            window.location.href = `product-detail.html?id=${productId}`;
+            window.location.href = `product-detail.html?id=${productId}&source=shop`;
         }
 
         function showToast(msg) {
@@ -568,7 +929,7 @@
                     matches.forEach(p => {
                         const el = document.createElement('a');
                         el.classList.add('search-result-item');
-                        el.href = `product-detail.html?id=${p.id}`;
+                        el.href = `product-detail.html?id=${p.id}&source=shop`;
                         el.innerHTML = `
                             <img src="${p.image}" class="search-result-img" onerror="this.src='https://placehold.co/60/f5f5f5/999?text=P'">
                             <div class="search-result-info">

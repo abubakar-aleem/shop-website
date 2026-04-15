@@ -11632,5 +11632,26 @@ const searchIndex = [
     "category": "Exhaust Fan Shutter",
     "image": "https://.unsplash.com/photo-158719478250-?auto=format&fit=crop&w=1200&q=60",
     "url": "products-wall-cover.html"
+  },
+  {
+    "name": "Faisal Handle Valve",
+    "desc": "Premium Faisal handle valve available in all sizes from 1/2\" to 2\".",
+    "category": "Handle Valves",
+    "image": "./handle valve.jpg",
+    "url": "products-handle-valve.html"
+  },
+  {
+    "name": "Kitz Handle Valve",
+    "desc": "High quality Kitz handle valve available in all sizes from 1/2\" to 2\".",
+    "category": "Handle Valves",
+    "image": "./handle valve.jpg",
+    "url": "products-handle-valve.html"
+  },
+  {
+    "name": "Dura Handle Valve",
+    "desc": "Reliable Dura handle valve available in all sizes from 1/2\" to 2\".",
+    "category": "Handle Valves",
+    "image": "./handle valve.jpg",
+    "url": "products-handle-valve.html"
   }
 ];
