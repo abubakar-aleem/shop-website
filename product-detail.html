@@ -263,8 +263,7 @@
             { id: 'p28', name: 'Nozzle Cock Tap', image: './Nozzle-Cock.jpg', category: 'faucets', oldPrice: null, price: 1450, sale: false, sizes: ['1/2"', '3/4"'], description: 'Brass nozzle cock with hose connection. Ideal for garden use, tank outlets and utility taps.', reviews: [] },
             { id: 'p29', name: 'Mirror & Accessory Set', image: './MIRROR AND ACCES.jpg', category: 'accessories', oldPrice: 5500, price: 4200, sale: true, sizes: ['Standard'], description: 'Premium 5-piece bathroom accessory set with mirror, towel rod, toilet roll holder, soap dish and tumbler holder.', reviews: [] },
             { id: 'p30', name: 'Bib Cock Single', image: './bib-cock-.jpg', category: 'faucets', oldPrice: null, price: 580, sale: false, sizes: ['1/2"', '3/4"'], description: 'Heavy duty brass bib cock with chrome plating. Quarter-turn ceramic disc cartridge for drip-free operation.', reviews: [] },
-            { id: 'p31', name: 'Double Bib Cock', image: './double bib cock.jpeg', category: 'faucets', oldPrice: 1200, price: 980, sale: true, sizes: ['1/2"', '3/4"'], description: 'Heavy-duty double bib cock for simultaneous hot and cold water connections. Chrome finish.', reviews: [] },
-            {
+            { id: 'p31', name: 'Double Bib Cock', image: './double bib cock.jpeg', category: 'faucets', oldPrice: 1200, price: 980, sale: true, sizes: ['1/2"', '3/4"'], description: 'Heavy-duty double bib cock for simultaneous hot and cold water connections. Chrome fin            {
                 id: 'p32',
                 name: 'Vanity Push Waste',
                 image: './Push_vanity_Waste.jpg',
@@ -485,7 +484,7 @@
             { id: 'p74', name: 'Wall Mounted Toothbrush Holder', image: 'https://placehold.co/600x600/008080/ffffff?text=Brush+Holder', category: 'accessories', oldPrice: 1200, price: 850, sale: true, sizes: ['Standard'], description: 'Stylish wall mounted holder for brushes and tumbler.', reviews: [] },
             { id: 'p75', name: 'Commercial Sink Faucet', image: 'https://placehold.co/600x600/008080/ffffff?text=Sink+Faucet', category: 'taps', oldPrice: 5500, price: 4800, sale: false, sizes: ['Standard'], description: 'Heavy duty commercial sink faucet for restaurants.', reviews: [] },
             { id: 'p76', name: 'Soft-Close Commode Cover', image: 'https://placehold.co/600x600/008080/ffffff?text=Commode+Cover', category: 'accessories', oldPrice: 2500, price: 1900, sale: true, sizes: ['Standard'], description: 'Universal soft-close commode seat cover.', reviews: [] },
-            { id: 'p77', name: 'Brass Stop Cock 3/4"', image: 'https://placehold.co/600x600/008080/ffffff?text=Stop+Cock', category: 'fittings', oldPrice: 1800, price: 1450, sale: false, sizes: ['Standard'], description: 'Full flow brass stop cock for main water lines.', reviews: [] },
+            { id: 'p77', name: 'Brass Stop Cock 3/4"', image: 'https://placehold.co/600x600/008080/ffffff?text=Stop+Cock', category: 'fittings', oldPrice: 1800, price: 1450, sale: false, sizes: ['Standard'], description: 'Full flow brass stop cock for main water lines.', reviews: [] },lines.', reviews: [] },
         ];
 
 
@@ -535,7 +534,7 @@
             }
 
             loadProduct(currentProduct);
-            
+
             // Conditionally render "You Might Like" section
             const source = params.get('source');
             if (source === 'shop' || source === 'featured') {
@@ -544,7 +543,7 @@
                 const relatedSec = document.querySelector('.related-section');
                 if (relatedSec) relatedSec.style.display = 'none';
             }
-            
+
             loadReviews(currentProduct.id);
         });
 
