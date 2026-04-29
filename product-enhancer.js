@@ -272,6 +272,13 @@ const PRICE_CATALOGUE = {
     'rbs no return valve 1-1/4 inch': { price: 820, oldPrice: null, sale: false },
     'rbs no return valve 1-1/2 inch': { price: 820, oldPrice: null, sale: false },
     'rbs no return valve 2 inch': { price: 820, oldPrice: null, sale: false },
+    // ---- PVC SOLUTIONS ----------------------------------
+    '50g pvc solution': { price: 80, oldPrice: null, sale: false },
+    '75g pvc solution': { price: 120, oldPrice: null, sale: false },
+    '125g pvc solution': { price: 220, oldPrice: null, sale: false },
+    '175g pvc solution': { price: 270, oldPrice: null, sale: false },
+    '250g pvc solution': { price: 310, oldPrice: null, sale: false },
+    '500g pvc solution': { price: 650, oldPrice: null, sale: false },
 };
 
 // Generic fallback: used when no exact match found
@@ -485,6 +492,7 @@ function getCategoryFromPage() {
     if (path.includes('motor')) return 'Motors';
     if (path.includes('check-valve')) return 'Check Valves';
     if (path.includes('no-return-valve')) return 'No Return Valves';
+    if (path.includes('pvc-solution')) return 'PVC Solution';
     return 'Products';
 }
 
