@@ -258,15 +258,15 @@ const PRICE_CATALOGUE = {
     'roma check valve 1-1/2 inch': { price: 1050, oldPrice: null, sale: false },
     'roma check valve 2 inch': { price: 1050, oldPrice: null, sale: false },
     // ---- NO RETURN VALVES ----------------------------------
-    'citi no return valve 1/2 inch': { price: 750, oldPrice: 850, sale: true },
-    'citi no return valve 3/4 inch': { price: 1000, oldPrice: 1150, sale: true },
+    'citi no return valve 1/2 inch': { price: 750, oldPrice: null, sale: true },
+    'citi no return valve 3/4 inch': { price: 1000, oldPrice: null, sale: true },
     'tfe no return valve 1/2 inch': { price: 820, oldPrice: null, sale: false },
     'tfe no return valve 3/4 inch': { price: 820, oldPrice: null, sale: false },
     'tfe no return valve 1 inch': { price: 820, oldPrice: null, sale: false },
     'tfe no return valve 1-1/4 inch': { price: 820, oldPrice: null, sale: false },
     'tfe no return valve 1-1/2 inch': { price: 820, oldPrice: null, sale: false },
     'tfe no return valve 2 inch': { price: 820, oldPrice: null, sale: false },
-    'rbs no return valve 1/2 inch': { price: 680, oldPrice: 750, sale: true },
+    'rbs no return valve 1/2 inch': { price: 680, oldPrice: null, sale: true },
     'rbs no return valve 3/4 inch': { price: 820, oldPrice: null, sale: false },
     'rbs no return valve 1 inch': { price: 820, oldPrice: null, sale: false },
     'rbs no return valve 1-1/4 inch': { price: 820, oldPrice: null, sale: false },
@@ -279,6 +279,14 @@ const PRICE_CATALOGUE = {
     '175g pvc solution': { price: 270, oldPrice: null, sale: false },
     '250g pvc solution': { price: 310, oldPrice: null, sale: false },
     '500g pvc solution': { price: 650, oldPrice: null, sale: false },
+    // ---- SILICONES & ADHESIVES ----------------------------------
+    '20ml silicone': { price: 80, oldPrice: null, sale: false },
+    '50ml silicone': { price: 120, oldPrice: null, sale: false },
+    'rtv silicon': { price: 450, oldPrice: null, sale: false },
+    'samad-bond': { price: 60, oldPrice: null, sale: false },
+    'samad bond 80g': { price: 100, oldPrice: null, sale: false },
+    'magic depoxie': { price: 120, oldPrice: null, sale: false },
+
 };
 
 // Generic fallback: used when no exact match found
@@ -493,6 +501,7 @@ function getCategoryFromPage() {
     if (path.includes('check-valve')) return 'Check Valves';
     if (path.includes('no-return-valve')) return 'No Return Valves';
     if (path.includes('pvc-solution')) return 'PVC Solution';
+    if (path.includes('silicone')) return 'Silicones & Adhesives';
     return 'Products';
 }
 
