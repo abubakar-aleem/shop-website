@@ -203,12 +203,12 @@ const PRICE_CATALOGUE = {
     'electric geyser': { price: 12000, oldPrice: 14500, sale: true },
     'instant geyser': { price: 9500, oldPrice: null, sale: false },
     // ---- BRASS GATE VALVE ----------------------------------
-    'brass gate valve 1/2"': { price: 380, oldPrice: null, sale: false },
-    'brass gate valve 3/4"': { price: 520, oldPrice: null, sale: false },
-    'brass gate valve 1"': { price: 750, oldPrice: null, sale: false },
-    'brass gate valve 1-1/4"': { price: 1050, oldPrice: null, sale: false },
-    'brass gate valve 1-1/2"': { price: 1350, oldPrice: null, sale: false },
-    'brass gate valve 2"': { price: 1800, oldPrice: null, sale: false },
+    '1/2" brass gate valve': { price: 380, oldPrice: null, sale: false },
+    '3/4" brass gate valve': { price: 520, oldPrice: null, sale: false },
+    '1" brass gate valve': { price: 750, oldPrice: null, sale: false },
+    '1-1/4" brass gate valve': { price: 1050, oldPrice: null, sale: false },
+    '1-1/2" brass gate valve': { price: 1350, oldPrice: null, sale: false },
+    '2" brass gate valve': { price: 1800, oldPrice: null, sale: false },
     // ---- HANDLE VALVES -------------------------------------
     'dura handle valve 1/2 inch': { price: 650, oldPrice: null, sale: false },
     'dura handle valve 3/4 inch': { price: 750, oldPrice: null, sale: false },
@@ -286,6 +286,45 @@ const PRICE_CATALOGUE = {
     'samad-bond': { price: 60, oldPrice: null, sale: false },
     'samad bond 80g': { price: 100, oldPrice: null, sale: false },
     'magic depoxie': { price: 120, oldPrice: null, sale: false },
+    
+    // Water Filters
+    'triple water filter': { price: 5500, oldPrice: null, sale: false },
+    'module triple filter': { price: 5800, oldPrice: null, sale: false },
+    'double filter': { price: 3500, oldPrice: null, sale: false },
+    'single 20" jumbo filter': { price: 6000, oldPrice: null, sale: false },
+    'cto water filter cartridge': { price: 1000, oldPrice: null, sale: false },
+    'ppf water filter cartridge': { price: 1200, oldPrice: null, sale: false },
+    'gac carbon filter cartridge': { price: 1500, oldPrice: null, sale: false },
+    '12" ppf jumbo filter cartridge': { price: 1200, oldPrice: null, sale: false },
+    '20" slim cto water filter cartridge': { price: 1800, oldPrice: null, sale: false },
+    '20" slim ppf filter cartridge': { price: 1800, oldPrice: null, sale: false },
+    '24" slim cto water filter cartridge': { price: 2000, oldPrice: null, sale: false },
+    '24" slim ppf water filter cartridge': { price: 2000, oldPrice: null, sale: false },
+    '24" jumbo ppf filter cartridge': { price: 2000, oldPrice: null, sale: false },
+    'filter s-pipe': { price: 3800, oldPrice: null, sale: false },
+    'water filter key': { price: 500, oldPrice: null, sale: false },
+
+    // Automatic Machine Pipe
+    '2meter automatic machine pipe': { price: 500, oldPrice: null, sale: false },
+    '3meter automatic machine pipe': { price: 750, oldPrice: null, sale: false },
+    '4meter automatic machine pipe': { price: 950, oldPrice: null, sale: false },
+    '5meter automatic machine pipe': { price: 1500, oldPrice: null, sale: false },
+    'automatic machine bush': { price: 250, oldPrice: null, sale: false },
+
+    //Kitchen-Hood-Pipe
+    '4" kitchen-hood-pipe (1m)': { price: 1500, oldPrice: null, sale: false },
+    '4" kitchen-hood-pipe (1.5m)': { price: 1800, oldPrice: null, sale: false },
+    '4" kitchen-hood-pipe (2m)': { price: 2000, oldPrice: null, sale: false },
+    '4" kitchen-hood-pipe (3m)': { price: 2400, oldPrice: null, sale: false },
+    '6" kitchen-hood-pipe (1m)': { price: 1700, oldPrice: null, sale: false },
+    '6" kitchen-hood-pipe (1.5m)': { price: 2000, oldPrice: null, sale: false },
+    '6" kitchen-hood-pipe (2m)': { price: 2500, oldPrice: null, sale: false },
+    '6" kitchen-hood-pipe (2.5m)': { price: 3000, oldPrice: null, sale: false },
+    '6" kitchen-hood-pipe (3m)': { price: 3500, oldPrice: null, sale: false },
+    '6" kitchen-hood-pipe (4m)': { price: 4000, oldPrice: null, sale: false },
+    '6" kitchen-hood-pipe (5m)': { price: 4500, oldPrice: null, sale: false },
+    '6" kitchen-hood-pipe (6m)': { price: 5000, oldPrice: null, sale: false },
+    
 
 };
 

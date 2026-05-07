@@ -674,6 +674,7 @@ footer {
     background: var(--charcoal-gray);
     color: white;
     padding: 60px 5% 30px;
+    cursor: pointer;
     margin-top: auto;
 }
 
