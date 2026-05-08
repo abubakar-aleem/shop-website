@@ -325,6 +325,33 @@ const PRICE_CATALOGUE = {
     '6" kitchen-hood-pipe (5m)': { price: 4500, oldPrice: null, sale: false },
     '6" kitchen-hood-pipe (6m)': { price: 5000, oldPrice: null, sale: false },
     
+    //Floor Waste
+    '6" master floor waste': { price: 290, oldPrice: null, sale: false },
+    '6" master wave floor waste': { price: 290, oldPrice: null, sale: false },
+    '6" master lever floor waste': { price: 290, oldPrice: null, sale: false },
+    '6" master burner waste': { price: 290, oldPrice: null, sale: false },
+    '6" life star hole floor waste': { price: 390, oldPrice: null, sale: false },
+    '6" life star wave floor waste': { price: 390, oldPrice: null, sale: false },
+    '6" life star lever floor waste': { price: 390, oldPrice: null, sale: false },
+    '6" life star burner floor waste': { price: 490, oldPrice: null, sale: false },
+    '6" life star push floor waste': { price: 790, oldPrice: 890, sale:true },
+    '4" lake wave floor waste': { price: 490, oldPrice:null, sale:false },
+    '6" lake wave floor waste': { price: 490, oldPrice:null, sale:false },
+    '6" lake hole floor waste': { price: 490, oldPrice:null, sale:false },
+    '6" lake lever floor waste': { price: 490, oldPrice:null, sale:false },
+    '6" lake burner floor waste': { price: 490, oldPrice:null, sale:false },
+    '6" camry floor waste': { price: 490, oldPrice:null, sale:false },
+    '6" camry wave floor waste': { price: 490, oldPrice:null, sale:false },
+    '6" camry lever floor waste': { price: 490, oldPrice:null, sale:false },
+    '6" wonder floor waste': { price: 490, oldPrice:null, sale:false },
+    '6" dell floor waste': { price: 490, oldPrice:null, sale:false },
+    '6" umer master floor waste': { price: 490, oldPrice:null, sale:false },
+
+    
+
+
+
+
 
 };
 
